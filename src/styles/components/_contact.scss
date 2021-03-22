@@ -1,0 +1,81 @@
+
+#contact {
+ padding: 3rem 0;
+ color: rgba($body-color, 0.6);
+
+
+}
+
+#form_contact {
+
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  padding: 2rem;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 2rem;
+
+  .col-12 {
+
+    width: 100%;
+    
+    div {
+      margin-bottom: 0.5rem;
+    }
+  
+  }
+
+  .form-control {
+    border: none;
+    background-color: $nav-color;
+    border-radius: 7px;
+    padding: 1rem 0.5rem;
+    outline: none;
+    min-width: 100%;
+    min-height: 40px;
+    color: rgba($body-color, 0.8);
+    font-size: 1rem;
+  }
+
+  .box-enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+
+}
+
+/*red social*/
+
+.red-social {
+  display: flex;
+  button {
+    border: 3px solid $first-color;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 7px;
+    margin: 0.5rem;
+    color: $first-color;
+    background-color: #ffffff;
+    display: flex;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+/*footer*/
+
+.footer {
+  width: 100%; 
+  height: 100px;
+  zoom: 3;
+  background: url(../../assets/image/wave02.svg);
+  background-position: unset;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+
+}

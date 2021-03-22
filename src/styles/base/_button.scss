@@ -1,0 +1,61 @@
+
+.btn__sm {
+
+  padding: 0.9rem 2.1rem;
+
+  &__second {
+    padding: 0.7rem 2.1rem;  
+  }
+
+}
+
+.btn__md {
+  padding: 0.9rem 5rem;
+}
+
+.btn__lg {
+  padding: 0.9rem 5rem;
+}
+
+.btn__primary {
+  
+  border-style: none;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(90deg, $first-color, $second-color);
+  background: -moz-linear-gradient(90deg,$first-color, $second-color);
+  background: -o-linear-gradient(90deg,$first-color, $second-color);
+  background: linear-gradient(90deg,$first-color, $second-color);
+  color: #ffffff;
+  cursor: pointer;
+  font-family: $body-font;
+  font-size: 1.2rem;
+  font-weight: 700;
+  
+  &:hover {
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.5);
+  }
+
+}
+
+.btn__second {
+  
+  border-radius: 5px;
+  border: 3px solid $first-color;
+  background-color: transparent;
+  /*
+  border-image: -webkit-linear-gradient(90deg, $first-color, $second-color);
+  border-image: -moz-linear-gradient(90deg,$first-color, $second-color);
+  border-image: -o-linear-gradient(90deg,$first-color, $second-color);
+  border-image: linear-gradient(90deg,$first-color, $second-color);
+  */
+  color: $first-color;
+  cursor: pointer;
+  font-family: $body-font;
+  font-size: 1.2rem;
+  font-weight: 700;
+  
+  &:hover {
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.5);
+  }
+
+}

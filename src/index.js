@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { PortfolioApp } from './PortfolioApp';
+import './styles/styles.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PortfolioApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

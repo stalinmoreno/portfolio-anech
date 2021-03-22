@@ -1,0 +1,20 @@
+
+$header-height: 3rem;
+
+//***** Colors *******
+$first-color: #5F23E4;
+$second-color: #A806D3;
+$light-color: #F2F2F2;
+$nav-color: #F2F4F9;
+
+//***** Font and typography ********
+$body-font: 'Dosis', sans-serif;
+$body-color: #494E5F;
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+$z-fixed: 100;
+
+@media screen and (min-width: 768px){
+  $normal-font-size: 1rem;
+  $small-font-size: .875rem;
+}
