@@ -10,31 +10,45 @@ export const About = () => {
 
   return (
     <div id="about">
-      <div className="section__main">
+      <div className="section__main  wrapper">
 
-        <div className="sec__about">
-          <h1 className="title_main">Sobre mí</h1>
-          <p>
-            Soy Astrid, una analista de innovación  y especialista en Diseño centrado en el usuario, utilizando distintas metodologías, herramientas, con experiencia facilitando y liderando distintos experimentos y proyectos.
-          </p>
+        <div className="sec__about about-grid">
 
-          <ButtonPrimary
-            title="Descargar CV"
-            styleClass="btn__primary btn__sm"
-            eventclick={handleDownloadCV}
-          />
+          <div className="box__foto">
+            <div id="home__foto"></div>
+          </div>
 
-          <ButtonPrimary
-            title="Contactame"
-            styleClass="btn__second btn__sm__second"
-            eventclick={handleDownloadCV}
-          />
+          <div className="box__about">
+            <h1 className="title_main">Sobre mí</h1>
+            <p>
+              Soy Astrid, una analista de innovación  y especialista en Diseño centrado en el usuario, utilizando distintas metodologías, herramientas, con experiencia facilitando y liderando distintos experimentos y proyectos.
+            </p>
 
-          <CardAbout />
-          <CardAbout />
-          <CardAbout />
+            <ButtonPrimary
+              title="Descargar CV"
+              styleClass="btn__primary btn__sm m-r"
+              eventclick={handleDownloadCV}
+            />
+
+            <ButtonPrimary
+              title="Contactame"
+              styleClass="btn__second btn__sm__second m-l"
+              eventclick={handleDownloadCV}
+            />
+
+
+
+          </div>
 
         </div>
+
+        <div className="box__personal">
+          <CardAbout />
+          <CardAbout />
+          <CardAbout />
+        </div>
+
+
 
       </div>
     </div>

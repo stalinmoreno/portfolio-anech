@@ -16,8 +16,9 @@
   border-radius: 7px;
   border: 1px solid $first-color;
   padding: 2rem;
-  margin: 0 3rem;
-  max-width: 25rem;
+  margin: 1rem auto;
+  width: 20rem;
+  //max-width: 25rem;
   position: relative;
 
   .card_comment {
@@ -27,9 +28,10 @@
     margin-bottom: 2rem;
     font-size: 1.2rem;
     height: 10rem;
-    display: flex;
-    align-items: center;
-    
+
+    @include ellipsis-multiline(17,1.4,6,10);
+
+
     &::before {
       content: '"';
       color: $first-color;
@@ -91,6 +93,37 @@
 
 
   }
+
+
+}
+
+
+
+
+/*
+* TABLET
+*/
+@media screen  and (min-width: 576px){
+
+
+}
+/*
+* LAPTOP
+*/
+@media screen  and (min-width: 768px){
+
+
+  .testimonial_grid {
+      grid-template-columns: 1fr;
+      gap: 0rem;
+  }
+
+
+}
+/*
+* DESKTOP
+*/
+@media screen  and (min-width: 1024px){
 
 
 }

@@ -1,5 +1,6 @@
-import React from 'react'
-import { ButtonPrimary } from '../UI/ButtonPrimary'
+import React from 'react';
+import { ButtonPrimary } from '../UI/ButtonPrimary';
+import { FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
 
 export const Home = () => {
 
@@ -8,8 +9,8 @@ export const Home = () => {
   }
 
   return (
-    <div id="home" >
-      <div className="section__main">
+    <div id="home">
+      <div className="section__main b-grid wrapper">
 
         <div className="sec__home">
           <h1>
@@ -21,9 +22,8 @@ export const Home = () => {
             <li>Diseñadora UX/UI</li>
             <li>Mentoring/Coaching</li>
           </ul>
-        </div>
 
-        <div className="text-center">
+          {/* <div className="text-center"> */}
 
           <ButtonPrimary
             title="Descargar CV"
@@ -31,9 +31,27 @@ export const Home = () => {
             eventclick={handleDownloadCV}
           />
 
+          {/* </div> */}
+
         </div>
 
-        <div id="home__foto"></div>
+        {/* <div className="text-center "> */}
+
+        <div className="box__foto">
+          <div id="home__foto"></div>
+        </div>
+
+
+
+        {/* </div> */}
+
+        <div className="home__red_social">
+          <FaLinkedinIn className="icon_red_social" />
+          <FaYoutube className="icon_red_social" />
+          <FaTwitter className="icon_red_social" />
+        </div>
+
+
 
       </div>
       {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,256L1440,96L1440,320L0,320Z"></path></svg> */}

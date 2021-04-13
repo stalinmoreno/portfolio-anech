@@ -8,233 +8,17 @@
 body {
   margin: $header-height 0 0 0;
   font-family: $body-font;
-  font-size: $normal-font-size;
-  font-weight: 500;
+  //font-size: $normal-font-size;
+  //font-weight: 500;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.bd-grid {
-  max-width: 1024px;
-  display: grid;
-  grid-template-columns: 100%;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.header {
-  width: 100%;
-  height: $header-height;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0 1.5rem;
-  background-color: $nav-color;
-  z-index: $z-fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__logo {
-  color: #222222;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-.header__toggle {
-  font-size: 1.5rem;
-  color: #222222;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  .nav {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    background-color: $first-color;
-    color: #ffffff;
-    width: 100%;
-    height: 100vh;
-    padding: 1.5rem 0;
-    z-index: $z-fixed;
-    transition: .5s;
-  }
-}
-
-.nav__content {
-  height: 100%;
-  grid-template-rows: max-content 1fr max-content;
-  row-gap: 2rem;
-}
-
-.nav__close {
-  position: absolute;
-  right: 1.5rem;
-  font-size: 1.3rem;
-  padding: .25rem;
-  background-color: $first-color;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.nav__img {
-  display: flex;
-  justify-content: center;
-  padding-top: .25rem;
-  margin-bottom: .8rem;
-  width: 56px;
-  height: 56px;
-  background-color: $second-color;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.nav__img img {
-  width: 46px;
-}
-
-.nav__name {
-  display: block;
-  color: #ffffff;
-}
-
-.nav__profesion {
-  font-size: $small-font-size;
-}
-
-.nav__menu {
-  align-self: center;
-}
-
-.nav__item {
-  margin: 2.5rem 0;
-}
-
-.nav__link {
-  color: #ffffff;
-}
-
-.nav__social {
-  padding-top: .5rem;
-}
-
-.nav__social-icon {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-right: 1rem;
-}
-
-.nav__social-icon:hover{
-  color: $second-color;
-}
-
-.show {
-  left: 0;
-}
-
-.active {
-  color: $second-color;
-}
-
-.text-center {
-  text-align: center;
-}
-
-/* media queries */
-
-@media screen and (min-width: 768px) {
-  body {
-    margin: 0;
-  }
-
-  .header {
-    height: calc(#{$header-height} + 1rem);
-  }
-
-  .header__logo, .header__toggle {
-    display: none;
-  }
-
-  .nav {
-    width: 100%;
-  }
-
-  .nav__content {
-    grid-template-columns: repeat(3, max-content);
-    grid-template-rows: 1fr;
-    column-gap: 1rem;
-    justify-content: space-between;
-  }
-
-  .nav__close, .nav__profesion {
-    display: none;
-  }
-
-  .nav__perfil {
-    display: flex;
-    align-items: center;
-  }
-
-  .nav__img {
-    width: 32px;
-    height: 32px;
-    margin-right: .5rem;
-    margin-bottom: 0;
-    align-items: center;
-  }
-
-  .nav_img img {
-    width: 26px;;
-  }
-
-  .nav__list {
-    display: flex;
-  }
-
-  .nav__item {
-    margin: 0 .25rem;
-  }
-
-  .nav_link {
-    padding: .5rem .8rem;
-    border-radius: .25rem;
-  }
-
-  .nav__link:hover{
-    background-color: $first-color;
-  }
-
-  .active {
-    background-color: $first-color;
-    color: #ffffff;
-  }
-
-}
-
-@media screen and (min-width: 1024px) {
-  .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .section__main {
-  margin: 0 2rem;
+  padding: 0 2rem;
 }
 
 
@@ -242,4 +26,54 @@ img {
   text-shadow: -15px -15px 0px #E3E3E3;
   font-size: 3rem;
   color: $body-color;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.title_center {
+  text-align: center;
+}
+
+// .title_study {
+//   text-align: center;
+//   margin: 3rem 0;
+// }
+
+
+/* ELLIPSIS MULTILINEA */
+@mixin ellipsis-multiline($font-size, $line-height, $lines-to-show, $margin:"0") {
+  $height-calc: $font-size*$line-height*$lines-to-show;
+  display: block;
+  display: -webkit-box;
+  font-size: $font-size*1px;
+  line-height: $line-height;
+  max-height: ($height-calc + $margin)*1px;
+  overflow: hidden;
+  //position: relative;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+
+  p:not(:first-of-type) {
+    display: none;
+  }
+}
+
+
+
+.b-grid, 
+.about-grid, 
+.box__personal, 
+.study_experience_grid, 
+.work_grid,
+.testimonial_grid,
+.contact-grid {
+  display: grid;
+  //grid-template-columns: repeat(1, 1fr);
+  //border: 1px solid red;
+  width: auto;
+  height: 100%;
+  //align-items: center;
+  gap: 0rem;
+  
 }

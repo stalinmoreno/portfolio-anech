@@ -6,8 +6,37 @@
  // height: 400px;
   border-radius: 30px;
   overflow: hidden;
-
+  margin: 0 1rem;
   img {
     border-radius: 30px;
   }
+}
+
+
+/*
+* TABLET
+*/
+@media screen  and (min-width: 576px){
+
+
+}
+/*
+* LAPTOP
+*/
+@media screen  and (min-width: 768px){
+
+
+  .work_grid {
+      grid-template-columns: 1fr;
+      gap: 0rem;
+  }
+
+
+}
+/*
+* DESKTOP
+*/
+@media screen  and (min-width: 1024px){
+
+
 }

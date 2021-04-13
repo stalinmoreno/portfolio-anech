@@ -10,11 +10,31 @@
 }
 
 .btn__md {
-  padding: 0.9rem 5rem;
+  padding: 0.9rem 4rem;
 }
 
 .btn__lg {
-  padding: 0.9rem 5rem;
+  padding: 0.9rem 4rem;
+}
+
+.m-all {
+  margin: 0.5rem;
+}
+
+.m-t {
+  margin-top: 0.5rem ;
+} 
+
+.m-r {
+  margin-right: 0.5rem;
+}
+
+.m-b {
+  margin-bottom: 0.5rem;
+} 
+
+.m-l {
+  margin-left: 0.5rem;
 }
 
 .btn__primary {
@@ -30,11 +50,11 @@
   font-family: $body-font;
   font-size: 1.2rem;
   font-weight: 700;
-  
+  outline: none;
   &:hover {
     box-shadow: 2px 3px 8px rgba(0,0,0,0.5);
   }
-
+  
 }
 
 .btn__second {
@@ -53,7 +73,6 @@
   font-family: $body-font;
   font-size: 1.2rem;
   font-weight: 700;
-  
   &:hover {
     box-shadow: 2px 3px 8px rgba(0,0,0,0.5);
   }

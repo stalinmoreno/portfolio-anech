@@ -14,3 +14,41 @@
     font-size: 1.15rem;
   }
 }
+
+  .box__about {
+    align-self: center;
+    margin: 1.5rem;
+  }
+
+
+@media screen  and (min-width: 576px){
+
+
+
+}
+
+@media screen  and (min-width: 768px){
+
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+  }
+  .box__personal {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0rem;
+  }
+  
+
+}
+
+@media screen  and (min-width: 1024px){
+
+
+  
+  // .wrapper {
+  //   max-width: 1400px;
+  //   margin: auto;
+  // }
+
+
+}

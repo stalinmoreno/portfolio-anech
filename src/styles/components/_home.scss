@@ -1,13 +1,55 @@
+
+
+/*
+* MOBILE
+*/
+
 #home {
   background-color: #F2F4F9;
   padding-top: 0.5rem ;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   background-image: url(../../assets/image/wave01.svg);
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center bottom;
+  //border: 1px solid yellow;
+  min-height: 600px;
+  //height: calc(100vh - 100px);
+}
+
+.b-grid {
+
+  grid-template-columns: repeat(1, 1fr);
+
+  
+}
+
+.home__red_social {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  .icon_red_social{
+    font-size: 3rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(90deg, $first-color, $second-color);
+    background: -moz-linear-gradient(90deg,$first-color, $second-color);
+    background: -o-linear-gradient(90deg,$first-color, $second-color);
+    background: linear-gradient(90deg,$first-color, $second-color);
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+
 }
 
 
 .sec__home {
+
+  align-self: center;
   
   h1 {
     font-size: 4rem;
@@ -34,8 +76,116 @@
 #home__foto {
   background-image: url('../../assets/image/foto01.png');
   background-position: center;
-  background-size: cover;
-  max-width: 25rem;
-  height: 25rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30rem;
+  margin: auto;
+}
+
+.box__foto{
+  //height: 50rem;
+  //min-height: 50rem;
+}
+
+/*
+* TABLET
+*/
+@media screen  and (min-width: 576px){
+
+  .header {
+   //background-color: blue;
+  }
+
+  .sec__home {
+    
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+  #home__foto {
+
+    height: 40rem;
+      
+  }
+
+
+
+}
+/*
+* LAPTOP
+*/
+@media screen  and (min-width: 768px){
+
+  .header {
+   //background-color: red;
+  }
+
+  .b-grid {
+    grid-template-columns: repeat(2, 1fr) 100px;
+    gap: 0rem;
+  }
+
+  #home {
+    height: 80vh;
+  }  
+
+
+ .sec__home {
+    margin: 0;
+  }
+
+  #home {
+    height: 80vh;
+  }
+
+  .home__red_social {
+    flex-direction: column;
+
+    .icon_red_social{
+      margin: 0.5rem 0;
+    }
+
+  }
+
+  .box__foto {
+    align-self: center;
+  }
+
+}
+/*
+* DESKTOP
+*/
+@media screen  and (min-width: 1024px){
+
+
+
+  .header {
+   //background-color: green;
+  }
+
+  .sec__home {
+    margin: 0 4rem;
+  }
+  
+
+
+  #home {
+    height: 90vh;
+    max-height: 1000px;
+  }
+
+    
+  .b-grid {
+
+    gap: 3rem;
+    //padding-bottom: 9rem;
+  }
+
+  
+  #home__foto {
+   // height: 40rem;
+  }
+
 }
 

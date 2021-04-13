@@ -52,10 +52,12 @@
 
 .red-social {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   button {
     border: 3px solid $first-color;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 7px;
     margin: 0.5rem;
     color: $first-color;
@@ -63,6 +65,7 @@
     display: flex;
     outline: none;
     cursor: pointer;
+    justify-content: center;
   }
 }
 
@@ -77,5 +80,36 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: content-box;
+
+}
+
+
+
+
+/*
+* TABLET
+*/
+@media screen  and (min-width: 576px){
+
+
+}
+/*
+* LAPTOP
+*/
+@media screen  and (min-width: 768px){
+
+
+  .contact-grid {
+      grid-template-columns: 1fr 80px 1fr;
+      gap: 0rem;
+  }
+
+
+}
+/*
+* DESKTOP
+*/
+@media screen  and (min-width: 1024px){
+
 
 }
