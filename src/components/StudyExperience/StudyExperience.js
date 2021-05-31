@@ -1,100 +1,112 @@
-import React from 'react'
+import React from 'react';
+import { FaPaintBrush, FaUsers, FaLightbulb, FaRegSmileWink, FaLaptop, FaHandshake } from "react-icons/fa";
 
 export const StudyExperience = () => {
   return (
-    <div id="study_experience ">
 
-
+    <div id="study_experience">
 
       <div className="section__main wrapper">
 
-        <h1 className="title_main title_study">Principales estudios y experiencia</h1>
+        <h1 className="title_main">Habilidades principales</h1>
 
-        <div className="study_experience_grid">
+        <div className="panel-main">
 
-          <div className="timeline">
-
-            <ul>
-              <div className="titletime">
-                <h4>Estudios</h4>
+          <div className="panel-card">
+            <div className="panel-card-image">
+              <div>
+                <FaPaintBrush />
               </div>
-              <li>
-                <div className="content">
-                  <h3>Analista de inovación</h3>
-                  <span>Valtx | Junio 2020 - actualmente</span>
-                  <p>Liderando y participando en la creación de nuevas soluciones e iniciativas de innovación</p>
-                </div>
-                {/* <div className="time">
-                <h4>Enero 2021</h4>
-              </div> */}
-              </li>
-
-              <li>
-                <div className="content">
-                  <h3>Analista de inovación</h3>
-                  <span>Valtx | Junio 2020 - actualmente</span>
-                  <p>Liderando y participando en la creación de nuevas soluciones e iniciativas de innovación</p>
-                </div>
-                {/* <div className="time">
-                <h4>Enero 2021</h4>
-              </div> */}
-              </li>
-
-              <li>
-                <div className="content">
-                  <h3>Analista de inovación</h3>
-                  <span>Valtx | Junio 2020 - actualmente</span>
-                  <p>Liderando y participando en la creación de nuevas soluciones e iniciativas de innovación</p>
-                </div>
-                {/* <div className="time">
-                <h4>Enero 2021</h4>
-              </div> */}
-              </li>
-
-            </ul>
+            </div>
+            <div className="panel-card-body">
+              <div className="panel-card-body-title">
+                UX/UI
+              </div>
+              <div className="panel-card-body-description">
+                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
+              </div>
+            </div>
           </div>
 
-          <div className="timeline_rigth ">
-            <ul>
-              <div className="titletime">
-                <h4>Experiencia</h4>
+          <div className="panel-card">
+            <div className="panel-card-image">
+              <div>
+                <FaUsers />
               </div>
-              <li>
-                <div className="content">
-                  <h3>Analista de inovación</h3>
-                  <span>Valtx | Junio 2020 - actualmente</span>
-                  <p>Liderando y participando en la creación de nuevas soluciones e iniciativas de innovación</p>
-                </div>
-                {/* <div className="time">
-                <h4>Enero 2021</h4>
-              </div> */}
-              </li>
-
-              <li>
-                <div className="content">
-                  <h3>Analista de inovación</h3>
-                  <span>Valtx | Junio 2020 - actualmente</span>
-                  <p>Liderando y participando en la creación de nuevas soluciones e iniciativas de innovación</p>
-                </div>
-                {/* <div className="time">
-                <h4>Enero 2021</h4>
-              </div> */}
-              </li>
-
-              <li>
-                <div className="content">
-                  <h3>Analista de inovación</h3>
-                  <span>Valtx | Junio 2020 - actualmente</span>
-                  <p>Liderando y participando en la creación de nuevas soluciones e iniciativas de innovación</p>
-                </div>
-                {/* <div className="time">
-                <h4>Enero 2021</h4>
-              </div> */}
-              </li>
-
-            </ul>
+            </div>
+            <div className="panel-card-body">
+              <div className="panel-card-body-title">
+                SCRUM
+              </div>
+              <div className="panel-card-body-description">
+                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
+              </div>
+            </div>
           </div>
 
+          <div className="panel-card">
+            <div className="panel-card-image">
+              <div>
+                <FaRegSmileWink />
+              </div>
+            </div>
+            <div className="panel-card-body">
+              <div className="panel-card-body-title">
+                Innovación
+              </div>
+              <div className="panel-card-body-description">
+                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
+              </div>
+            </div>
+          </div>
+
+          <div className="panel-card">
+            <div className="panel-card-image">
+              <div>
+                <FaLaptop />
+              </div>
+            </div>
+            <div className="panel-card-body">
+              <div className="panel-card-body-title">
+                Transformación Digital
+              </div>
+              <div className="panel-card-body-description">
+                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
+              </div>
+            </div>
+          </div>
+
+          <div className="panel-card">
+            <div className="panel-card-image">
+              <div>
+                <FaHandshake />
+              </div>
+            </div>
+            <div className="panel-card-body">
+              <div className="panel-card-body-title">
+                Lean Startup
+              </div>
+              <div className="panel-card-body-description">
+                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
+              </div>
+            </div>
+          </div>
+
+          <div className="panel-card">
+            <div className="panel-card-image">
+              <div>
+                <FaLightbulb />
+              </div>
+            </div>
+            <div className="panel-card-body">
+              <div className="panel-card-body-title">
+                Design Thinking
+              </div>
+              <div className="panel-card-body-description">
+                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
+              </div>
+            </div>
+          </div>
 
 
         </div>

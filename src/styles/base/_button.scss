@@ -40,7 +40,7 @@
 .btn__primary {
   
   border-style: none;
-  border-radius: 5px;
+  border-radius: 1.875rem;
   background: -webkit-linear-gradient(90deg, $first-color, $second-color);
   background: -moz-linear-gradient(90deg,$first-color, $second-color);
   background: -o-linear-gradient(90deg,$first-color, $second-color);
@@ -59,7 +59,7 @@
 
 .btn__second {
   
-  border-radius: 5px;
+  border-radius: 1.875rem;
   border: 3px solid $first-color;
   background-color: transparent;
   /*
@@ -77,4 +77,26 @@
     box-shadow: 2px 3px 8px rgba(0,0,0,0.5);
   }
 
+}
+
+.btn__nav {
+  
+  border-radius: 1.875rem;
+  border: 3px solid $first-color;
+  background-color: transparent;
+  color: $first-color;
+  cursor: pointer;
+  font-family: $body-font;
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  &:hover {
+    padding: 0.68rem 1.68rem;
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.2);
+    background: -webkit-linear-gradient(90deg, $first-color, $second-color);
+    background: -moz-linear-gradient(90deg,$first-color, $second-color);
+    background: -o-linear-gradient(90deg,$first-color, $second-color);
+    background: linear-gradient(90deg,$first-color, $second-color);
+    border: 0px;
+    color: white;
+  }
 }

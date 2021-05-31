@@ -52,3 +52,78 @@
   }
 
 }
+
+// card basic
+
+.card_basic {
+
+  background-color: #ffffff;
+  border: 2px solid $first-color;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.2);
+
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &_title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-weight: bold;
+      &_num {
+        font-size: 3.5rem;
+        background: -webkit-linear-gradient( $first-color, $second-color);
+        background: -moz-linear-gradient($first-color, $second-color);
+        background: -o-linear-gradient($first-color, $second-color);
+        background: linear-gradient($first-color, $second-color);
+        color:transparent;
+        -webkit-background-clip: text;
+        
+      }
+
+      &_subtitle {
+        font-size: 1rem;
+        color: $body-color;
+      }
+
+    }
+
+    &_icon {
+      width: 5.1rem;
+      height: 5.1rem;
+      background: url('../../assets/image/back-icon.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
+
+  &_body {  
+
+    z-index: 1;
+
+    &_title {
+      border-bottom: 1px solid rgba(0,0,0,0.4);
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    &_description {
+      padding-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+  }
+
+}

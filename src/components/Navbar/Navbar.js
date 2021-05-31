@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-scroll'
-import { FaBars, FaTimes, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaBars, FaTimes, FaLinkedinIn, FaYoutube, FaTwitter, FaInstagram, FaBehance } from "react-icons/fa";
 
 //import '../Navbar/animation';
 
@@ -48,18 +48,20 @@ export const Navbar = () => {
                 <li className="nav__item"><a href="#" className="nav__link">Habilidades</a></li>
                 <li className="nav__item"><a href="#" className="nav__link">Portafolio</a></li>
                 <li className="nav__item"><a href="#" className="nav__link">Testimonios</a></li>
-                <li className="nav__item"><a href="#" className="nav__link">Contactame</a></li>
+                <li className="nav__item nav__contact"><a href="#" className="btn__nav">Contactame</a></li>
               </ul>
             </div>
 
             <div className="nav__social">
               <a href="#" className="nav__social-icon"><FaLinkedinIn /></a>
+              <a href="#" className="nav__social-icon"><FaInstagram /></a>
               <a href="#" className="nav__social-icon"><FaYoutube /></a>
-              <a href="#" className="nav__social-icon"><FaTwitter /></a>
+              <a href="#" className="nav__social-icon"><FaBehance /></a>
             </div>
 
           </div>
         </nav>
+
       </header>
     </>
   )

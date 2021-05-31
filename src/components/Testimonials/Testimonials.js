@@ -5,33 +5,7 @@ import { ButtonPrimary } from '../UI/ButtonPrimary';
 
 export const Testimonials = () => {
 
-
   const splideOptions = {
-    rewind: true,
-    width: '90rem',
-    //autoWidth: true,
-    gap: '0rem',
-    type: 'loop',
-    //destroy: true,
-    perPage: 3,
-    perMove: 3,
-    focus: 'center',
-    //cover: true,
-    breakpoints: {
-      1024: {
-        perPage: 2,
-        destroy: false,
-      },
-      800: {
-        perPage: 1,
-        destroy: false,
-      },
-
-    },
-
-  }
-
-  const splideOptions2 = {
     type: 'slide',
     //rewind: true,
     //cover: true,
@@ -39,7 +13,8 @@ export const Testimonials = () => {
     perPage: 3,
     perMove: 3,
     //fixedWidth: '12rem',
-
+    arrows: false,
+    //gap: 2,
     breakpoints: {
       1060: {
         perPage: 2,
@@ -49,18 +24,18 @@ export const Testimonials = () => {
       730: {
         perPage: 1,
         perMove: 1,
-        type: 'slide',
+        //  type: 'slide',
         pagination: true,
       }
     },
     focus: 'center',
     pagination: false,
-    classes: {
-      arrows: 'splide__arrows your-class-arrows',
-      arrow: 'splide__arrow your-class-arrow',
-      prev: 'splide__arrow--prev your-class-prev',
-      next: 'splide__arrow--next your-class-next',
-    },
+    // classes: {
+    //   arrows: 'splide__arrows your-class-arrows',
+    //   arrow: 'splide__arrow your-class-arrow',
+    //   prev: 'splide__arrow--prev your-class-prev',
+    //   next: 'splide__arrow--next your-class-next',
+    // },
   }
 
 
@@ -73,7 +48,7 @@ export const Testimonials = () => {
 
 
         <Splide
-          options={splideOptions2}
+          options={splideOptions}
         >
           <SplideSlide>
 

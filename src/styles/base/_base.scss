@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1305px;
   margin: 0 auto;
 }
 
@@ -27,7 +27,7 @@ body {
   font-size: 3rem;
   color: $body-color;
   text-align: center;
-  margin: 3rem 0;
+  //margin: 3rem 0;
 }
 
 .title_center {
@@ -66,8 +66,7 @@ body {
 .box__personal, 
 .study_experience_grid, 
 .work_grid,
-.testimonial_grid,
-.contact-grid {
+.testimonial_grid {
   display: grid;
   //grid-template-columns: repeat(1, 1fr);
   //border: 1px solid red;

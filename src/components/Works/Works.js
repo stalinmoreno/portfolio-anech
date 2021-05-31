@@ -1,82 +1,125 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { FaAngleRight } from "react-icons/fa";
+
 
 export const Works = () => {
+
+  const splideOptions = {
+    type: 'slide',
+    //rewind: true,
+    //cover: true,
+    // width: '100%',
+    perPage: 2,
+    perMove: 1,
+    //fixedWidth: '12rem',
+    arrows: false,
+    breakpoints: {
+      // 900: {
+      //   perPage: 2,
+      //   perMove: 2,
+      //   pagination: true,
+      // },
+      900: {
+        perPage: 1,
+        perMove: 1,
+        //type: 'slide',
+        //pagination: true,
+
+      }
+    },
+    //focus: 'center',
+    pagination: true,
+    classes: {
+      arrows: 'splide__arrows your-class-arrows',
+      arrow: 'splide__arrow your-class-arrow',
+      prev: 'splide__arrow--prev your-class-prev',
+      next: 'splide__arrow--next your-class-next',
+    },
+  }
+
   return (
     <div id="works">
       <div className="section__main wrapper">
 
         <h1 className="title_main">Mis proyectos...</h1>
 
-        <div className="">
 
-          <Splide
-            // options={{
-            //   rewind: true,
-            //   width: 800,
-            //   //autoWidth: true,
-            //   gap: '1rem',
-            //   type: 'loop'
-            // }}
 
-            // options={{
-            //   rewind: true,
-            //   perPage: 3,
-            //   width: '75rem',
-            //   perMove: 1,
-            //   gap: '1rem',
-            // }}
-            // onMoved={(splide, newIndex) => { console.log('moved', newIndex) }}
-
-            options={{
-              type: 'loop',
-              //rewind: true,
-              cover: true,
-              width: '100%',
-              perPage: 3,
-              //fixedWidth: '12rem',
-              breakpoints: {
-                576: {
-                  perPage: 1,
-                }
-              },
-              focus: 'center',
-              pagination: false,
-            }}
-
-          >
-            <SplideSlide>
-              <div className="card_slide">
+        <Splide
+          options={splideOptions}
+        >
+          <SplideSlide>
+            <div className="panel_works">
+              <div className="panel_works_item">
                 <img alt="imagen" src="../images/work01.jpg" />
+                <div className="panel_works_item_footer">
+                  <div className="panel_works_item_footer_title">UTEC 1</div>
+                  <div className="panel_works_item_footer_description">Trabajo desarrollado para agilizar procesos</div>
+                  <div className="panel_works_item_footer_link">
+                    <a href="#"><span>Ver más</span><FaAngleRight /></a>
+                  </div>
+                </div>
               </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div className="card_slide">
+            </div>
+          </SplideSlide>
+
+          <SplideSlide>
+            <div className="panel_works">
+              <div className="panel_works_item">
                 <img alt="imagen" src="../images/work01.jpg" />
+                <div className="panel_works_item_footer">
+                  <div className="panel_works_item_footer_title">UTEC 2</div>
+                  <div className="panel_works_item_footer_description">Trabajo desarrollado para agilizar procesos</div>
+                  <div className="panel_works_item_footer_link">
+                    <a href="#"><span>Ver más</span><FaAngleRight /></a>
+                  </div>
+                </div>
               </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div className="card_slide">
+            </div>
+          </SplideSlide>
+
+          <SplideSlide>
+            <div className="panel_works">
+              <div className="panel_works_item">
                 <img alt="imagen" src="../images/work01.jpg" />
+                <div className="panel_works_item_footer">
+                  <div className="panel_works_item_footer_title">UTEC 3</div>
+                  <div className="panel_works_item_footer_description">Trabajo desarrollado para agilizar procesos</div>
+                  <div className="panel_works_item_footer_link">
+                    <a href="#"><span>Ver más</span><FaAngleRight /></a>
+                  </div>
+                </div>
               </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div className="card_slide">
+            </div>
+          </SplideSlide>
+
+          <SplideSlide>
+            <div className="panel_works">
+              <div className="panel_works_item">
                 <img alt="imagen" src="../images/work01.jpg" />
+                <div className="panel_works_item_footer">
+                  <div className="panel_works_item_footer_title">UTEC 4</div>
+                  <div className="panel_works_item_footer_description">Trabajo desarrollado para agilizar procesos</div>
+                  <div className="panel_works_item_footer_link">
+                    <a href="#"><span>Ver más</span><FaAngleRight /></a>
+                  </div>
+                </div>
               </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div className="card_slide">
-                <img alt="imagen" src="../images/work01.jpg" />
-              </div>
-            </SplideSlide>
-          </Splide>
+            </div>
+          </SplideSlide>
+
+        </Splide>
 
 
-        </div>
 
-      </div>
+
+
+
+
+
+      </div >
     </div >
   )
 }

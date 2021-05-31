@@ -16,24 +16,18 @@ export const Contact = () => {
     <>
       <div id="contact">
         <div className="section__main  contact-grid wrapper">
-
-          <div>
-
-            <h1 className="title_main">Hey, gracias...</h1>
-
+          <h1 className="title_main">Hey, gracias...</h1>
+          <div className="section-hey">
             <p>
               Espero que te haya gustado conocer mas de mi en el ambito profesional, es por eso que te invito a descargar mi CV y contactarme para charlar con una bebida mientras comemos galletas.
-          </p>
-
-            <ButtonPrimary
-              title="Descargar CV"
-              styleClass="btn__second btn__sm__second"
-              eventclick={handleDownloadCV}
-            />
-
-
-
+            </p>
           </div>
+
+          <ButtonPrimary
+            title="Descargar CV"
+            styleClass="btn__second btn__sm__second"
+            eventclick={handleDownloadCV}
+          />
 
           <div className="red-social">
 
@@ -49,7 +43,7 @@ export const Contact = () => {
 
           </div>
 
-          <div>
+          {/* <div>
 
             <form id="form_contact">
 
@@ -88,19 +82,14 @@ export const Contact = () => {
                 />
               </div>
 
-            </form>
+            </form> 
 
-          </div>
-
-
-
-
-
+          </div> */}
 
         </div>
-
       </div>
-      <div className="footer"></div>
+      <div className="footer-back"></div>
+      <div className="footer">© Astrid Escajadillo 2021</div>
     </>
   )
 }

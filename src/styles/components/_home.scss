@@ -6,15 +6,28 @@
 
 #home {
   background-color: #F2F4F9;
-  padding-top: 0.5rem ;
-  margin-top: 3rem;
+  //padding-top: 2rem ;
+ // margin-top: 3rem;
   margin-bottom: 3rem;
-  background-image: url(../../assets/image/wave01.svg);
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  //background-image: url(../../assets/image/wave01.svg);
+  //background-repeat: no-repeat;
+  //background-position: center bottom;
   //border: 1px solid yellow;
   min-height: 600px;
   //height: calc(100vh - 100px);
+  position: relative;
+}
+
+#home .svg {
+  width: 100%;
+  height: 7rem;
+  background-image: url(../../assets/image/wave01.svg);
+  background-repeat: no-repeat;
+  background-size: 250rem;
+  background-position: center bottom;
+  position: absolute;
+  bottom: 0;
+  //z-index: ;
 }
 
 .b-grid {
@@ -30,29 +43,41 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-
+  z-index: 6;
   .icon_red_social{
-    font-size: 3rem;
+    font-size: 1.5rem;
     padding: 0.8rem;
-    border-radius: 5px;
-    background: -webkit-linear-gradient(90deg, $first-color, $second-color);
-    background: -moz-linear-gradient(90deg,$first-color, $second-color);
-    background: -o-linear-gradient(90deg,$first-color, $second-color);
-    background: linear-gradient(90deg,$first-color, $second-color);
-    color: #ffffff;
+    margin: 5px;
+    display: flex;
+    border-radius: 50%;
+    //border-radius: 50%;
+    // background: -webkit-linear-gradient(90deg, $first-color, $second-color);
+    // background: -moz-linear-gradient(90deg,$first-color, $second-color);
+    // background: -o-linear-gradient(90deg,$first-color, $second-color);
+    // background: linear-gradient(90deg,$first-color, $second-color);
+    background-color: rgba($first-color, 0.2);
+    //color: #ffffff;
+    color: $first-color;
     cursor: pointer;
     margin: 0 0.5rem;
+
+    &:hover {
+      background-color: rgba($first-color, 0.8);
+      color: #ffffff;
+    }
   }
+  
 
 }
 
-
 .sec__home {
-
+  margin: 0;
   align-self: center;
-  
+  text-align: center;
+  //max-width: 25rem;
   h1 {
-    font-size: 4rem;
+    font-size: 2.8rem;
+    justify-content: center;
     .title_home {
 
       background: -webkit-linear-gradient( $first-color, $second-color);
@@ -69,6 +94,7 @@
     margin-bottom: 2rem;
     font-weight: 600;
     color: $body-color;
+    text-align: center;
   }
 
 }
@@ -79,6 +105,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: 30rem;
+  max-height: 49rem;
+  max-width: 45rem;
   margin: auto;
 }
 
@@ -87,29 +115,21 @@
   //min-height: 50rem;
 }
 
+.nav__social {
+  justify-content: center;
+}
+
 /*
 * TABLET
 */
 @media screen  and (min-width: 576px){
 
-  .header {
-   //background-color: blue;
-  }
-
   .sec__home {
     
     h1 {
-      font-size: 5rem;
+      font-size: 4rem;
     }
   }
-
-  #home__foto {
-
-    height: 40rem;
-      
-  }
-
-
 
 }
 /*
@@ -121,23 +141,62 @@
    //background-color: red;
   }
 
-  .b-grid {
-    grid-template-columns: repeat(2, 1fr) 100px;
-    gap: 0rem;
-  }
+  // .b-grid {
+  //   grid-template-columns: 1fr 2fr 55px;
+  //   gap: 0rem;
+  // }
 
   #home {
-    height: 80vh;
+    padding-top: 4rem;
   }  
 
 
- .sec__home {
-    margin: 0;
+
+  .home__red_social {
+    //flex-direction: column;
+
+    .icon_red_social{
+      //margin: 0.5rem 0;
+    }
+
   }
 
-  #home {
-    height: 80vh;
+  .box__foto {
+    align-self: center;
   }
+
+    
+  #home__foto {
+    //max-height: 30rem;
+    //max-width: 30rem;
+    //antes height: 48rem;
+    height: 35rem;
+  }
+
+  #home .svg {
+    height: 5rem;
+    background-size: 184rem;
+  }
+
+
+
+}
+/*
+* DESKTOP
+*/
+@media screen  and (min-width: 900px){
+
+  #home {
+    padding-top: 6rem;
+  }  
+
+  .header {
+   //background-color: green;
+  }
+
+  // .sec__home {
+  //   margin: 0 4rem;
+  // }
 
   .home__red_social {
     flex-direction: column;
@@ -148,44 +207,66 @@
 
   }
 
-  .box__foto {
-    align-self: center;
-  }
-
-}
-/*
-* DESKTOP
-*/
-@media screen  and (min-width: 1024px){
-
-
-
-  .header {
-   //background-color: green;
-  }
 
   .sec__home {
-    margin: 0 4rem;
+    text-align: left;
+    max-width: 25rem;
+    h1 {
+      font-size: 4rem;
+      text-align: left;
+    }
+    ul{
+      text-align: left;
+    }
   }
   
 
 
   #home {
-    height: 90vh;
+   // height: 90vh;
     max-height: 1000px;
   }
 
     
   .b-grid {
-
-    gap: 3rem;
-    //padding-bottom: 9rem;
+    grid-template-columns: 1fr 2fr 55px;
+    gap: 0rem;
   }
 
   
   #home__foto {
-   // height: 40rem;
+    height: 35rem;
+   // max-height: 40rem;
+    //width: 40rem;
+  }
+
+    #home .svg {
+    background-size: cover;
   }
 
 }
 
+@media screen  and (min-width: 1200px){
+  #home__foto {
+    height: 43rem;
+  }
+  #home {
+    //padding-top: 5rem;
+  }  
+}
+
+@media screen  and (min-width: 1400px){
+  #home {
+    //padding-top: 9rem;
+  }  
+
+}
+
+// @media screen  and (min-width: 1500px){
+//   #home__foto {
+//     height: 48rem;
+//   }
+// }
+
+// Hecho con el "" por Stalin 
+// Copyright 2021 - Todos los derechos reservados

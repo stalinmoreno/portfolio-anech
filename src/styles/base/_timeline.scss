@@ -31,8 +31,8 @@
     li {
       line-height: normal;
       position: relative;
-      width: 80%;
-      max-width: 400px;
+      width: 93%;
+      //max-width: 400px;
       padding: 10px;
       box-sizing: border-box;
       margin-left: 2rem;
@@ -114,9 +114,10 @@
   position: relative;
   //width: 35rem;
   padding: 0 1.5rem;
+
   .titletime {
     color: $first-color;
-    margin-right: 50px;
+    margin-right: 1rem;
     font-size: 1.5rem;
     text-align: end;
   }
@@ -125,7 +126,7 @@
     content: '';
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 1.5rem;
     width: 0.2rem;
     height: 100%;
     background: $first-color;
@@ -139,11 +140,11 @@
     li {
       line-height: normal;
       position: relative;
-      width: 80%;
-      max-width: 400px;
+      width: 93%;
+      //max-width: 400px;
       padding: 10px;
       box-sizing: border-box;
-      margin-left: 2rem;
+      //margin-left: 2rem;
 
       // &:nth-child(odd) {
       //   //float: left;
@@ -168,7 +169,7 @@
       &:nth-child(odd)::before {
         content: '';
         position: absolute;
-        right: -3.08rem;
+        right: -3.5rem;
         top: 0.9rem;
         width: 35px;
         height: 35px;
@@ -182,7 +183,7 @@
       &:nth-child(even)::before {
         content: '';
         position: absolute;
-        right: -3.08rem;
+        right: -3.5rem;
         top: 0.9rem;
         width: 35px;
         height: 35px;

@@ -2,16 +2,60 @@
 #works {
   padding: 3rem 0;
 }
-.card_slide{
- // height: 400px;
-  border-radius: 30px;
-  overflow: hidden;
-  margin: 0 1rem;
-  img {
-    border-radius: 30px;
-  }
-}
+.panel_works{
 
+  &_item {
+    border-radius: 30px;
+    //width: 30rem;
+    overflow: hidden;
+    margin: 2rem 1rem;
+    position: relative;
+    box-shadow: 1px 2px 15px rgba(#000000, 0.1);
+    min-height: 22rem;
+    img {
+      border-radius: 30px;
+      //height: 25rem;
+      //width: 100%;
+
+    }
+    &_footer {
+      position: absolute;
+      bottom: 0;
+      background-color: #FFFFFF;
+      width: 100%;
+      padding: 0.8rem 1.5rem;
+
+      &_title {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      &_link{
+        margin-top: 0.5rem;
+        display: flex;
+        
+        a {
+          text-decoration: none;
+          display: flex;
+          font-size: 1.2rem;
+          align-items: center;
+          //background-color: red;
+          color: $body-color;
+
+          span {
+            margin-bottom: 5px;
+          }
+          
+        }
+      }
+
+    }
+  }
+
+}
+.splide__pagination__page.is-active {
+  background: rgba($body-color,0.5) !important;
+}
 
 /*
 * TABLET
