@@ -44,6 +44,10 @@
   justify-content: center;
   flex-direction: row;
   z-index: 6;
+  position: relative;
+  //top: 35%;
+  //right: 0;
+  
   .icon_red_social{
     font-size: 1.5rem;
     padding: 0.8rem;
@@ -162,6 +166,7 @@
   }
 
   .box__foto {
+    position: relative;
     align-self: center;
   }
 
@@ -200,6 +205,10 @@
 
   .home__red_social {
     flex-direction: column;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    z-index: 2;
 
     .icon_red_social{
       margin: 0.5rem 0;
@@ -210,10 +219,11 @@
 
   .sec__home {
     text-align: left;
-    max-width: 25rem;
+    //max-width: 25rem;
     h1 {
       font-size: 4rem;
       text-align: left;
+      margin-top: 0;
     }
     ul{
       text-align: left;
@@ -229,7 +239,7 @@
 
     
   .b-grid {
-    grid-template-columns: 1fr 2fr 55px;
+    grid-template-columns: 0.7fr 1fr;
     gap: 0rem;
   }
 

@@ -37,27 +37,24 @@ export const Home = () => {
 
         <div className="box__foto">
           <div id="home__foto"></div>
+          <div className="home__red_social">
+            <a href="#" className="icon_red_social" >
+              <FaLinkedinIn />
+            </a>
+            <a href="#" className="icon_red_social" >
+              <FaYoutube />
+            </a>
+            <a href="#" className="icon_red_social" >
+              <FaTwitter />
+            </a>
+          </div>
         </div>
 
 
 
         {/* </div> */}
 
-        <div className="home__red_social">
-          <a href="#" className="icon_red_social" >
-            <FaLinkedinIn />
-          </a>
-          <a href="#" className="icon_red_social" >
-            <FaYoutube />
-          </a>
-          <a href="#" className="icon_red_social" >
-            <FaTwitter />
-          </a>
 
-          {/* <FaLinkedinIn className="icon_red_social" />
-          <FaYoutube className="icon_red_social" />
-          <FaTwitter className="icon_red_social" /> */}
-        </div>
 
 
 
