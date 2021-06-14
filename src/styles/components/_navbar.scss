@@ -36,19 +36,42 @@ img {
   // justify-content: space-between;
   // align-items: center;
 
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  width: 100%;
-  height: 5rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0 1.5rem;
-  background-color: #F2F4F9;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // padding-top: 1.5rem;
+  // padding-bottom: 1.5rem;
+  // width: 100%;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // background-color: #F2F4F9;
+  // z-index: 100;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+   //border: 1px solid green;
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: #f2f4f9;
+    z-index: 5;
+
+    .container {
+      max-width: 1305px;
+      display: flex;
+      /* margin: auto 0; */
+      /* text-align: center; */
+      justify-content: space-between;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+    }
+
+
 }
 
 .header__logo {
@@ -83,16 +106,13 @@ img {
     max-width: 1305px;
     margin: 0 auto;
     width: 100%;
-    /* height: 5rem; */
-    /* position: fixed; */
     top: 0;
     left: 0;
-    padding: 1.5rem;
+    // padding: 0 2rem;
     background-color: #F2F4F9;
-    /* z-index: 100; */
-    /* display: flex; */
     justify-content: space-between;
     align-items: center;
+    //border: 1px solid green;
   }
 
   .nav__perfil{
@@ -107,6 +127,8 @@ img {
 /* media queries */
 
 @media screen and (max-width: 768px) {
+
+
 
   .nav {
     width: 100%;
@@ -133,6 +155,7 @@ img {
     height: 85%;
     grid-template-rows: max-content 1fr max-content;
     row-gap: 2rem;
+    padding: 1rem;
   }
   
   .nav__close {
@@ -231,7 +254,7 @@ img {
   .nav__perfil {
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    //padding-left: 2rem;
   }
 
 
@@ -248,8 +271,11 @@ img {
   }
 
   .header {
-    height: calc(#{$header-height} + 1rem);
+    //height: calc(#{$header-height} + 1rem);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
+
 
   .header__logo, .header__toggle {
     display: none;
@@ -321,6 +347,7 @@ img {
 
     .nav__contact {
     display: block;
+    margin-right: 0 !important;
   }
 
 }

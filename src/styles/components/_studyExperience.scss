@@ -9,10 +9,10 @@
 */
 .panel-main {
   background-color: #FFFFFF;
-  padding: 4rem 2rem;
+  padding: 2rem 0.5rem;
   border-radius: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill,minmax(17rem, 1fr));
   gap: 3rem;
   .panel-card {
     background-color: #FFFFFF;
@@ -20,11 +20,12 @@
     display: flex;
     padding: 0.6rem;
     gap: 10px;
+    
     &-image {
       
       div {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
         background-color: $first-color;
         color: #FFFFFF;
         font-size: 2rem;
@@ -49,6 +50,33 @@
     }
   
   }
+}
+
+/*
+* SMALL
+*/
+
+@media screen  and (min-width: 365px){
+  .panel-main {
+    padding: 4rem 2rem;
+
+     .panel-card {
+
+    &-image {
+      
+      div {
+        width: 5rem;
+        height: 5rem;
+
+
+      }
+    }
+
+  }
+}
+
+
+  
 }
 
 

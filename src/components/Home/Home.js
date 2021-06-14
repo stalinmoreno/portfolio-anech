@@ -17,7 +17,7 @@ export const Home = () => {
             <div>Hola! Soy <span className="title_home">Astrid</span></div>
           </h1>
           <ul>
-            <li>Analista de Innovación</li>
+            <li>Analista de Innovación y Transformación Digital</li>
             <li>Diseñadora UX/UI</li>
           </ul>
 

@@ -8,11 +8,11 @@ export const Works = () => {
 
   const splideOptions = {
     type: 'slide',
-    //rewind: true,
+    rewind: true,
     //cover: true,
-    // width: '100%',
+    width: '90%',
     perPage: 2,
-    perMove: 1,
+    perMove: 2,
     //fixedWidth: '12rem',
     arrows: false,
     breakpoints: {
@@ -21,12 +21,25 @@ export const Works = () => {
       //   perMove: 2,
       //   pagination: true,
       // },
-      900: {
+      840: {
         perPage: 1,
         perMove: 1,
+        width: '80%',
+        rewind: true,
         //type: 'slide',
         //pagination: true,
-
+      },
+      640: {
+        perPage: 1,
+        perMove: 1,
+        width: '90%',
+        //type: 'slide',
+        //pagination: true,
+      },
+      360: {
+        perPage: 1,
+        perMove: 1,
+        width: '100%',
       }
     },
     //focus: 'center',
@@ -44,8 +57,6 @@ export const Works = () => {
       <div className="section__main wrapper">
 
         <h1 className="title_main">Mis proyectos...</h1>
-
-
 
         <Splide
           options={splideOptions}
@@ -111,6 +122,7 @@ export const Works = () => {
           </SplideSlide>
 
         </Splide>
+
 
 
 
