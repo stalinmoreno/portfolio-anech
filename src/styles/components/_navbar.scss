@@ -219,13 +219,14 @@ img {
   .nav__social {
     padding-top: .5rem;
     display: flex;
+    gap: 0.5rem;
   }
   
   .nav__social-icon {
     font-size: 1.5rem;
     //color: #ffffff;
     color: $first-color;
-    margin-right: 1rem;
+    //margin-right: 1rem;
     //border: 1px solid #ffffff;
     padding: 1rem;
     border-radius: 1.875rem;
@@ -274,6 +275,7 @@ img {
     //height: calc(#{$header-height} + 1rem);
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    z-index: 7;
   }
 
 

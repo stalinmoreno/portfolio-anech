@@ -18,14 +18,14 @@ body {
 }
 
 .section__main {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 
 .title_main {
   text-shadow: -15px -15px 0px #E3E3E3;
-  font-size: 3rem;
+  font-size: 2rem;
   color: $body-color;
   text-align: center;
   //margin: 3rem 0;
@@ -48,7 +48,7 @@ body {
   display: -webkit-box;
   font-size: $font-size*1px;
   line-height: $line-height;
-  max-height: ($height-calc + $margin)*1px;
+  max-height: 196.8px;// ($height-calc + $margin)*1px;
   overflow: hidden;
   //position: relative;
   text-overflow: ellipsis;

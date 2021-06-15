@@ -12,7 +12,7 @@
   padding: 2rem 0.5rem;
   border-radius: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fill,minmax(100%, 1fr));
   gap: 3rem;
   .panel-card {
     background-color: #FFFFFF;
@@ -20,7 +20,9 @@
     display: flex;
     padding: 0.6rem;
     gap: 10px;
-    
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     &-image {
       
       div {
@@ -46,6 +48,8 @@
       }
       &-description {
         margin-top: 0.7rem;
+        font-size: $normal-font-size;
+        line-height: 1.7rem;
       }
     }
   
@@ -56,11 +60,17 @@
 * SMALL
 */
 
-@media screen  and (min-width: 365px){
+@media screen  and (min-width: 450px){
+  .title_main {
+    font-size: 3rem;
+  }
   .panel-main {
-    padding: 4rem 2rem;
-
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    
      .panel-card {
+               flex-direction: row;
+        align-items: left;
+        text-align: left;
 
     &-image {
       
@@ -85,7 +95,13 @@
 * TABLET
 */
 @media screen  and (min-width: 576px){
+  .panel-main {
+    padding: 4rem 2rem;
+    
+      .panel-card {
 
+      }
+  }
 
 }
 /*
