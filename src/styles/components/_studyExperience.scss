@@ -13,7 +13,7 @@
   border-radius: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(100%, 1fr));
-  gap: 3rem;
+  gap: 1rem;
   .panel-card {
     background-color: #FFFFFF;
     padding: 1rem;
@@ -50,6 +50,7 @@
         margin-top: 0.7rem;
         font-size: $normal-font-size;
         line-height: 1.7rem;
+        color: #494E5F;
       }
     }
   
@@ -66,7 +67,7 @@
   }
   .panel-main {
     grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-    
+    gap: 3rem;
      .panel-card {
                flex-direction: row;
         align-items: left;

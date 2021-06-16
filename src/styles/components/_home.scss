@@ -7,7 +7,7 @@
 #home {
   background-color: #F2F4F9;
   //padding-top: 2rem ;
- // margin-top: 3rem;
+ margin-top: 3rem;
   margin-bottom: 3rem;
   //background-image: url(../../assets/image/wave01.svg);
   //background-repeat: no-repeat;
@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  z-index: 6;
+  z-index: 2;
   position: relative;
   background-color:none;
   //top: 35%;
@@ -134,7 +134,7 @@
   
   #home__foto {
     
-    //height: 30rem;
+    height: 25rem;
 
   }
 
@@ -150,6 +150,12 @@
     h1 {
       font-size: 4rem;
     }
+  }
+
+    #home__foto {
+    
+    height: 30rem;
+
   }
   
 

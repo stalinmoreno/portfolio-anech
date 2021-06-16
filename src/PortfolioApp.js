@@ -10,8 +10,9 @@ import { Works } from './components/Works/Works';
 export const PortfolioApp = () => {
   return (
     <div className="App">
-      <Navbar />
+
       <div className="container">
+        <Navbar />
         <Home />
         <About />
         <StudyExperience />
