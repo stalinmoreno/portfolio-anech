@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ButtonPrimary } from '../UI/ButtonPrimary';
 import { FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import { Element } from 'react-scroll';
+import { gsap, Power3 } from 'gsap/all';
 
 export const Home = () => {
 
@@ -8,36 +10,50 @@ export const Home = () => {
     alert("Descargando...");
   }
 
+  //Effects
+  const effectBoxFoto = useRef(null);
+  const effectTitle = useRef(null);
+  const effectDetail = useRef(null);
+  const effectDownload = useRef(null);
+
+  useEffect(() => {
+    //gsap.from(cSecHome.current, 0.8, { opacity: 0, duration: 3, ease: Linear.easeIn }, "feature+=0.25");
+    //gsap.from(cHome.current, 0.5, { left: 300, autoAlpha: 0 });
+    //gsap.from(cHome.current, 0.2, { scale: 0, autoAlpha: 0 }, 0.1);
+    //gsap.from(effectTitle.current, 0.4, { right: 50, autoAlpha: 0 }, "-=0.25");
+    //gsap.from(effectDetail.current, 0.4, { right: 50, autoAlpha: 0 }, "-=0.25");
+    //gsap.from(effectDownload.current, 0.5, { scale: 0.5, autoAlpha: 1, opacity: 0 }, "feature+=0.25");
+    //gsap.from(effectDownload.current, 0.3, { opacity: 0, duration: 2, ease: Linear.easeIn, scale: 0.8, autoAlpha: 1 }, "feature+=0.25");
+    gsap.from(effectTitle.current, 0.5, { opacity: 0, y: +100, ease: Power3.easeOut });
+    gsap.from(effectDetail.current, 0.5, { opacity: 0, y: +100, ease: Power3.easeOut, delay: 0.2 });
+    gsap.from(effectDownload.current, 0.5, { opacity: 0, y: +100, ease: Power3.easeOut, delay: 0.4 });
+    gsap.from(effectBoxFoto.current, 0.5, { left: 100, autoAlpha: 0 }, "feature+=0.25");
+  }, []);
+
   return (
-    <div id="home">
+    <Element id="home" name="indexHome">
       <div className="section__main b-grid wrapper">
 
-        <div className="sec__home">
-          <h1>
+        <div className="sec__home" >
+          <h1 ref={effectTitle}>
             <div>Hola! Soy <span className="title_home">Astrid</span></div>
           </h1>
-          <ul>
+          <ul ref={effectDetail}>
             <li>Analista de Innovación y Transformación Digital</li>
             <li>Diseñadora UX/UI</li>
           </ul>
-
-          {/* <div className="text-center"> */}
-
-          <ButtonPrimary
-            title="Descargar CV"
-            styleClass="btn__primary btn__md"
-            eventclick={handleDownloadCV}
-          />
-
-          {/* </div> */}
-
+          <div ref={effectDownload}>
+            <ButtonPrimary
+              title="Descargar CV"
+              styleClass="btn__primary btn__md"
+              eventclick={handleDownloadCV}
+            />
+          </div>
         </div>
 
-        {/* <div className="text-center "> */}
-
-        <div className="box__foto">
-          <div id="home__foto"></div>
-          <div className="home__red_social">
+        <div className="box__foto" ref={effectBoxFoto} >
+          <div id="home__foto" ></div>
+          <div className="home__red_social" >
             <a href="#" className="icon_red_social" >
               <FaLinkedinIn />
             </a>
@@ -50,19 +66,9 @@ export const Home = () => {
           </div>
         </div>
 
-
-
-        {/* </div> */}
-
-
-
-
-
       </div>
-      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,256L1440,96L1440,320L0,320Z"></path></svg> */}
-      <div class="svg">
-        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,320L1440,256L1440,320L0,320Z"></path></svg> */}
-      </div>
-    </div>
+
+      <div class="svg"></div>
+    </Element>
   )
 }

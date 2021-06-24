@@ -1,34 +1,56 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 import { FaBars, FaTimes, FaLinkedinIn, FaYoutube, FaTwitter, FaInstagram, FaBehance } from "react-icons/fa";
+import { gsap, Linear } from 'gsap/all';
 
-//import '../Navbar/animation';
 
 export const Navbar = () => {
 
   const navMenuRef = useRef(null);
   const [menuActive, setMenuActive] = useState(0);
+  //const [scrollNavbar, setScrollNavbar] = useState(0);
 
   const handleNavToggleClick = () => {
-    setMenuActive(1);
+    if (window.innerWidth < 769) {
+      setMenuActive(menuActive == 1 ? 0 : 1);
+    }
   }
 
-  const handleNavCloseClick = () => {
-    setMenuActive(0);
-  }
+  //Effects
+  const effectHeader = useRef(null);
+
+  useEffect(() => {
+    gsap.from(effectHeader.current, 0.8, {
+      opacity: 0,
+      duration: 3,
+      ease: Linear.easeIn
+    }, "feature+=0.25");
+  }, []);
+
+  //scroll top
+  /*const changeNavbar = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 80) {
+      setScrollNavbar(1);
+    } else {
+      setScrollNavbar(0);
+    }
+  }*/
+  //Asignar evento scroll
+  /*useEffect(() => {
+    window.addEventListener('scroll', changeNavbar);
+  }, []);*/
 
   return (
     <>
-      <header className="header">
+      <header className="header" ref={effectHeader}>
         <div className="container section__main">
           <a href="#" className="header__logo">Anech</a>
           <FaBars className="header__toggle" id="nav-toggle" onClick={handleNavToggleClick} />
 
           <nav className={menuActive == 1 ? 'nav show' : 'nav'} id="nav-menu" ref={navMenuRef} >
             <div className="nav__content bd-grid">
-
-              <FaTimes className="nav__close" id="nav-close" onClick={handleNavCloseClick} />
-
+              <FaTimes className="nav__close" id="nav-close" onClick={handleNavToggleClick} />
               <div className="nav__perfil">
 
                 {/* <div className="nav__img">
@@ -43,12 +65,83 @@ export const Navbar = () => {
 
               <div className="nav__menu">
                 <ul className="nav__list">
-                  <li className="nav__item"><a href="#" className="nav__link active">Inicio</a></li>
-                  <li className="nav__item"><a href="#" className="nav__link">Sobre mi</a></li>
-                  <li className="nav__item"><a href="#" className="nav__link">Habilidades</a></li>
-                  <li className="nav__item"><a href="#" className="nav__link">Portafolio</a></li>
-                  <li className="nav__item"><a href="#" className="nav__link">Testimonios</a></li>
-                  <li className="nav__item nav__contact"><a href="#" className="btn__nav">Contactame</a></li>
+                  <li className="nav__item">
+                    <Link
+                      className="nav__link"
+                      activeClass="active"
+                      to="indexHome"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      // exact="true"
+                      offset={-70}
+                      onClick={handleNavToggleClick}
+                    >Inicio</Link>
+                  </li>
+                  <li className="nav__item">
+                    <Link
+                      className="nav__link"
+                      activeClass="active"
+                      to="indexAbout"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      // exact="true"
+                      offset={-70}
+                      onClick={handleNavToggleClick}
+                    >Sobre mí</Link>
+                  </li>
+                  <li className="nav__item">
+                    <Link
+                      className="nav__link"
+                      activeClass="active"
+                      to="indexSkills"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      // exact="true"
+                      offset={-20}
+                      onClick={handleNavToggleClick}
+                    >Habilidades</Link>
+                  </li>
+                  <li className="nav__item">
+                    <Link
+                      className="nav__link"
+                      activeClass="active"
+                      to="indexWorks"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      // exact="true"
+                      offset={-20}
+                      onClick={handleNavToggleClick}
+                    >Portafolio</Link>
+                  </li>
+                  <li className="nav__item">
+                    <Link
+                      className="nav__link"
+                      activeClass="active"
+                      to="indexTestimonials"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      // exact="true"
+                      offset={-20}
+                      onClick={handleNavToggleClick}
+                    >Testimonios</Link>
+                  </li>
+                  <li className="nav__item nav__contact">
+                    <Link
+                      className="btn__nav"
+                      to="indexContact"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      // exact="true"
+                      offset={-20}
+                      onClick={handleNavToggleClick}
+                    >Contactame</Link>
+                  </li>
                 </ul>
               </div>
 

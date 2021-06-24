@@ -23,7 +23,7 @@
 .box__about {
   align-self: center;
   margin: 0 auto;
-  max-width: 80%;//25rem;
+  max-width: 100%;//25rem;
   text-align: center;
 }
 
@@ -71,6 +71,7 @@
   .box__about {
     font-size: 1.25rem;
     line-height: 1.8rem;
+    max-width: 80%;
   }
 
 }
@@ -104,11 +105,11 @@
   .box__foto_about {
     order: 1;
   }
-.box__about {
-  .title_main {
+  .box__about {
+    .title_main {
     text-align: left;
+    }
   }
-}
   
   // .wrapper {
   //   max-width: 1400px;

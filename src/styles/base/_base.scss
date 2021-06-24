@@ -1,5 +1,5 @@
 
-
+.App { overflow-x: hidden;}
 //***** Base ******
 *, ::before, ::after {
   box-sizing: border-box;
@@ -76,4 +76,19 @@ body {
   //align-items: center;
   gap: 0rem;
   
+}
+
+//Scrollbar
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+ 
+body::-webkit-scrollbar-track {
+  background:  rgba(0, 0, 0, 0.1);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(95, 35, 228, 0.3);
+  border-radius: 1rem;
 }

@@ -74,6 +74,10 @@ img {
 
 }
 
+.stylescroll {
+  box-shadow: 1px 2px 5px rgba($color: #222222, $alpha: 0.2);
+}
+
 .header__logo {
   color: #222222;
   font-weight: 700;
@@ -88,6 +92,7 @@ img {
 
   .nav__link {
     color: $body-color;
+    cursor: pointer;
   }
 
   .nav__link:hover {
