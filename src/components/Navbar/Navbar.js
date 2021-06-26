@@ -146,10 +146,10 @@ export const Navbar = () => {
               </div>
 
               <div className="nav__social">
-                <a href="#" className="nav__social-icon"><FaLinkedinIn /></a>
-                <a href="#" className="nav__social-icon"><FaInstagram /></a>
-                <a href="#" className="nav__social-icon"><FaYoutube /></a>
-                <a href="#" className="nav__social-icon"><FaBehance /></a>
+                <a href="https://www.linkedin.com/in/astrid-escajadillo-chavez-b19535160" target="blank" className="nav__social-icon"><FaLinkedinIn /></a>
+                <a href="https://www.instagram.com/astrid.escajadillo" target="blank" className="nav__social-icon"><FaInstagram /></a>
+                <a href="https://www.youtube.com/channel/UCvyuR2PYB1vrcMlnzmQdB9Q" target="blank" className="nav__social-icon"><FaYoutube /></a>
+                <a href="https://www.behance.net/astridescajad" target="blank" className="nav__social-icon"><FaBehance /></a>
               </div>
 
             </div>

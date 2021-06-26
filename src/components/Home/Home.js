@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ButtonPrimary } from '../UI/ButtonPrimary';
-import { FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import { ButtonDownload } from '../UI/ButtonDownload';
+import { FaLinkedinIn, FaYoutube, FaInstagram, FaBehance } from "react-icons/fa";
 import { Element } from 'react-scroll';
 import { gsap, Power3 } from 'gsap/all';
 
@@ -43,10 +44,9 @@ export const Home = () => {
             <li>Diseñadora UX/UI</li>
           </ul>
           <div ref={effectDownload}>
-            <ButtonPrimary
+            <ButtonDownload
               title="Descargar CV"
               styleClass="btn__primary btn__md"
-              eventclick={handleDownloadCV}
             />
           </div>
         </div>
@@ -54,14 +54,25 @@ export const Home = () => {
         <div className="box__foto" ref={effectBoxFoto} >
           <div id="home__foto" ></div>
           <div className="home__red_social" >
-            <a href="#" className="icon_red_social" >
+            <a href="https://www.linkedin.com/in/astrid-escajadillo-chavez-b19535160/" className="icon_red_social"
+              target="blank"
+            >
               <FaLinkedinIn />
             </a>
-            <a href="#" className="icon_red_social" >
+            <a href="https://www.youtube.com/channel/UCvyuR2PYB1vrcMlnzmQdB9Q" className="icon_red_social"
+              target="blank"
+            >
               <FaYoutube />
             </a>
-            <a href="#" className="icon_red_social" >
-              <FaTwitter />
+            <a href="https://www.instagram.com/astrid.escajadillo" className="icon_red_social"
+              target="blank"
+            >
+              <FaInstagram />
+            </a>
+            <a href="https://www.behance.net/astridescajad" className="icon_red_social"
+              target="blank"
+            >
+              <FaBehance />
             </a>
           </div>
         </div>

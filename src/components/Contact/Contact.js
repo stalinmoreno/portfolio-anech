@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { ButtonPrimary } from '../UI/ButtonPrimary';
-import { FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
+import { ButtonDownload } from '../UI/ButtonDownload';
+import { FaLinkedinIn, FaYoutube, FaInstagram, FaBehance } from "react-icons/fa";
 import { Element } from 'react-scroll';
 import { gsap, Power3 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,6 +14,7 @@ export const Contact = () => {
 
   const handleDownloadCV = () => {
     alert("Download...");
+
   }
 
   //Effects
@@ -24,6 +26,7 @@ export const Contact = () => {
   const effectLinkedin = useRef(null);
   const effectYoutube = useRef(null);
   const effectTiwitter = useRef(null);
+  const effectBeh = useRef(null);
 
   useEffect(() => {
 
@@ -70,7 +73,7 @@ export const Contact = () => {
       scrollTrigger: {
         trigger: effectLinkedin.current,
         toggleActions: "play none none none",
-        start: "top 75%",
+        start: "top 70%",
       },
       opacity: 0,
       y: +50,
@@ -82,7 +85,7 @@ export const Contact = () => {
       scrollTrigger: {
         trigger: effectYoutube.current,
         toggleActions: "play none none none",
-        start: "top 75%",
+        start: "top 70%",
       },
       opacity: 0,
       y: +50,
@@ -94,12 +97,24 @@ export const Contact = () => {
       scrollTrigger: {
         trigger: effectTiwitter.current,
         toggleActions: "play none none none",
-        start: "top 75%",
+        start: "top 70%",
       },
       opacity: 0,
       y: +50,
       ease: Power3.easeOut,
       delay: 0.8,
+    });
+
+    gsap.from(effectBeh.current, 0.7, {
+      scrollTrigger: {
+        trigger: effectBeh.current,
+        toggleActions: "play none none none",
+        start: "top 70%",
+      },
+      opacity: 0,
+      y: +50,
+      ease: Power3.easeOut,
+      delay: 0.9,
     });
 
 
@@ -117,24 +132,39 @@ export const Contact = () => {
             </p>
           </div>
           <div ref={effectDownload}>
-            <ButtonPrimary
+            <ButtonDownload
               title="Descargar CV"
-              styleClass="btn__second btn__sm__second"
-              eventclick={handleDownloadCV}
+              styleClass="btn__primary btn__md"
             />
           </div>
 
           <div className="red-social">
 
-            <button ref={effectLinkedin}>
+            <a href="https://www.linkedin.com/in/astrid-escajadillo-chavez-b19535160"
+              target="blank"
+              ref={effectLinkedin}
+            >
               <FaLinkedinIn />
-            </button>
-            <button ref={effectYoutube}>
+            </a>
+            <a href="https://www.youtube.com/channel/UCvyuR2PYB1vrcMlnzmQdB9Q"
+              target="blank"
+              ref={effectYoutube}
+            >
               <FaYoutube />
-            </button>
-            <button ref={effectTiwitter}>
+            </a>
+            <a href="https://www.instagram.com/astrid.escajadillo"
+              target="blank"
+              ref={effectTiwitter}
+            >
               <FaInstagram />
-            </button>
+            </a>
+
+            <a href="https://www.behance.net/astridescajad"
+              target="blank"
+              ref={effectBeh}
+            >
+              <FaBehance />
+            </a>
 
           </div>
 
