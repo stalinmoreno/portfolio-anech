@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "title": "UX/UI",
+      "descirption": "Es un hecho establecido hace demasiado tiempo que un lector se distraerá.",
+      "icon": "FaPaintBrush"
+    },
+    {
+      "title": "SCRUM",
+      "descirption": "Es un hecho establecido hace demasiado tiempo que un lector se distraerá.",
+      "icon": "FaUsers"
+    },
+    {
+      "title": "Innovación",
+      "descirption": "Es un hecho establecido hace demasiado tiempo que un lector se distraerá.",
+      "icon": "FaRegSmileWink"
+    },
+    {
+      "title": "Transformación Digital",
+      "descirption": "Es un hecho establecido hace demasiado tiempo que un lector se distraerá.",
+      "icon": "FaLaptop"
+    },
+    {
+      "title": "Lean Startup",
+      "descirption": "Es un hecho establecido hace demasiado tiempo que un lector se distraerá.",
+      "icon": "FaHandshake"
+    },
+    {
+      "title": "Design Thinking",
+      "descirption": "Es un hecho establecido hace demasiado tiempo que un lector se distraerá.",
+      "icon": "FaLightbulb"
+    }
+  ]
+}

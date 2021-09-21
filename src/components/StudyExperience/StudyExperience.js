@@ -1,13 +1,16 @@
 import React, { useEffect, useRef } from 'react';
-import { FaPaintBrush, FaUsers, FaLightbulb, FaRegSmileWink, FaLaptop, FaHandshake } from "react-icons/fa";
+//import { FaPaintBrush, FaUsers, FaLightbulb, FaRegSmileWink, FaLaptop, FaHandshake } from "react-icons/fa";
+import { FaIcon } from '../UI/FaIcon';
 import { Element } from 'react-scroll';
 import { gsap, Power3 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import data from '../../data/skills.json';
 
 export const StudyExperience = () => {
 
   gsap.registerPlugin(ScrollTrigger);
   const effectTitle = useRef(null);
+
   useEffect(() => {
 
     gsap.from(effectTitle.current, 0.5, {
@@ -48,107 +51,28 @@ export const StudyExperience = () => {
   }, []);
 
   return (
-
     <Element id="study_experience" name="indexSkills">
       <div className="section__main wrapper">
         <h1 className="title_main" ref={effectTitle}>Habilidades principales</h1>
         <div className="panel-main">
-          <div className="panel-card">
-            <div className="panel-card-image">
-              <div>
-                <FaPaintBrush />
-              </div>
-            </div>
-            <div className="panel-card-body">
-              <div className="panel-card-body-title">
-                UX/UI
-              </div>
-              <div className="panel-card-body-description">
-                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
-              </div>
-            </div>
-          </div>
-
-          <div className="panel-card">
-            <div className="panel-card-image">
-              <div>
-                <FaUsers />
-              </div>
-            </div>
-            <div className="panel-card-body">
-              <div className="panel-card-body-title">
-                SCRUM
-              </div>
-              <div className="panel-card-body-description">
-                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
-              </div>
-            </div>
-          </div>
-
-          <div className="panel-card">
-            <div className="panel-card-image">
-              <div>
-                <FaRegSmileWink />
-              </div>
-            </div>
-            <div className="panel-card-body">
-              <div className="panel-card-body-title">
-                Innovación
-              </div>
-              <div className="panel-card-body-description">
-                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
-              </div>
-            </div>
-          </div>
-
-          <div className="panel-card">
-            <div className="panel-card-image">
-              <div>
-                <FaLaptop />
-              </div>
-            </div>
-            <div className="panel-card-body">
-              <div className="panel-card-body-title">
-                Transformación Digital
-              </div>
-              <div className="panel-card-body-description">
-                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
-              </div>
-            </div>
-          </div>
-
-          <div className="panel-card">
-            <div className="panel-card-image">
-              <div>
-                <FaHandshake />
-              </div>
-            </div>
-            <div className="panel-card-body">
-              <div className="panel-card-body-title">
-                Lean Startup
-              </div>
-              <div className="panel-card-body-description">
-                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
-              </div>
-            </div>
-          </div>
-
-          <div className="panel-card">
-            <div className="panel-card-image">
-              <div>
-                <FaLightbulb />
-              </div>
-            </div>
-            <div className="panel-card-body">
-              <div className="panel-card-body-title">
-                Design Thinking
-              </div>
-              <div className="panel-card-body-description">
-                Es un hecho establecido hace demasiado tiempo que un lector se distraerá.
-              </div>
-            </div>
-          </div>
-
+          {
+            data.skills.length != 0
+              ?
+              data.skills.map(skill => (
+                <div className="panel-card">
+                  <div className="panel-card-image">
+                    <div>
+                      <FaIcon icon={skill.icon} />
+                    </div>
+                  </div>
+                  <div className="panel-card-body">
+                    <div className="panel-card-body-title">{skill.title}</div>
+                    <div className="panel-card-body-description">{skill.descirption}</div>
+                  </div>
+                </div>
+              ))
+              : "No hay información disponible"
+          }
 
         </div>
       </div>

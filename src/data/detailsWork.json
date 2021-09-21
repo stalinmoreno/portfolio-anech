@@ -1,0 +1,38 @@
+[
+  {
+    "iddetail": 1,
+    "idwork": 1,
+    "description": "parrafo 1",
+    "image": "../images/work01.jpg"
+  },
+  {
+    "iddetail": 2,
+    "idwork": 2,
+    "description": "parrafo 2",
+    "image": "../images/work01.jpg"
+  },
+  {
+    "iddetail": 3,
+    "idwork": 3,
+    "description": "parrafo 3",
+    "image": "../images/work01.jpg"
+  },
+  {
+    "iddetail": 4,
+    "idwork": 3,
+    "description": "parrafo 4",
+    "image": "../images/work01.jpg"
+  },
+  {
+    "iddetail": 5,
+    "idwork": 3,
+    "description": "parrafo 5",
+    "image": "../images/work01.jpg"
+  },
+  {
+    "iddetail": 6,
+    "idwork": 4,
+    "description": "parrafo 6",
+    "image": "../images/work01.jpg"
+  }
+]

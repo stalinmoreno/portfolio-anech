@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { ButtonPrimary } from '../UI/ButtonPrimary';
 import { ButtonDownload } from '../UI/ButtonDownload';
-import { FaLinkedinIn, FaYoutube, FaInstagram, FaBehance } from "react-icons/fa";
+//import { FaLinkedinIn, FaYoutube, FaInstagram, FaBehance } from "react-icons/fa";
+import { FaIcon } from '../UI/FaIcon';
 import { Element } from 'react-scroll';
 import { gsap, Power3 } from 'gsap/all';
+import data from '../../data/networks.json';
 
 export const Home = () => {
 
@@ -31,6 +33,12 @@ export const Home = () => {
     gsap.from(effectBoxFoto.current, 0.5, { left: 100, autoAlpha: 0 }, "feature+=0.25");
   }, []);
 
+  // const { networks } = apiNetworks;
+  // let redes = apiNetworks.map((network) => {
+  //   return network;
+  // });
+  // console.log(networks);
+
   return (
     <Element id="home" name="indexHome">
       <div className="section__main b-grid wrapper">
@@ -54,26 +62,17 @@ export const Home = () => {
         <div className="box__foto" ref={effectBoxFoto} >
           <div id="home__foto" ></div>
           <div className="home__red_social" >
-            <a href="https://www.linkedin.com/in/astrid-escajadillo-chavez-b19535160/" className="icon_red_social"
-              target="blank"
-            >
-              <FaLinkedinIn />
-            </a>
-            <a href="https://www.youtube.com/channel/UCvyuR2PYB1vrcMlnzmQdB9Q" className="icon_red_social"
-              target="blank"
-            >
-              <FaYoutube />
-            </a>
-            <a href="https://www.instagram.com/astrid.escajadillo" className="icon_red_social"
-              target="blank"
-            >
-              <FaInstagram />
-            </a>
-            <a href="https://www.behance.net/astridescajad" className="icon_red_social"
-              target="blank"
-            >
-              <FaBehance />
-            </a>
+            {
+              data.Networks.map(network => (
+                < a
+                  href={network.src}
+                  className="icon_red_social"
+                  target="blank"
+                >
+                  <FaIcon icon={network.icon} />
+                </a>
+              ))
+            }
           </div>
         </div>
 

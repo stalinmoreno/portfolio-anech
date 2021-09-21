@@ -41,10 +41,10 @@
   
   border-style: none;
   border-radius: 1.875rem;
-  background: -webkit-linear-gradient(90deg, $first-color, $second-color);
-  background: -moz-linear-gradient(90deg,$first-color, $second-color);
-  background: -o-linear-gradient(90deg,$first-color, $second-color);
-  background: linear-gradient(90deg,$first-color, $second-color);
+  background: -webkit-linear-gradient(30deg, $second-color,$first-color);
+  background: -moz-linear-gradient(30deg, $second-color,$first-color);
+  background: -o-linear-gradient(30deg, $second-color,$first-color);
+  background: linear-gradient(30deg, $second-color,$first-color);
   color: #ffffff;
   cursor: pointer;
   font-family: $body-font;
@@ -52,7 +52,7 @@
   font-weight: 700;
   outline: none;
   &:hover {
-    box-shadow: 2px 3px 8px rgba(0,0,0,0.5);
+    box-shadow: rgba($first-color, 0.5) -5px 5px 8px,
   }
   
 }

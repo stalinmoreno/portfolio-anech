@@ -3,10 +3,11 @@ import { Element } from 'react-scroll';
 import { ButtonPrimary } from '../UI/ButtonPrimary'
 import { CardAbout } from '../UI/CardAbout';
 import { CardAboutBasic } from '../UI/CardAboutBasic';
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
+//import Fade from 'react-reveal/Fade';
+//import Slide from 'react-reveal/Slide';
 import { gsap, Power3 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
 export const About = () => {
 
@@ -92,6 +93,10 @@ export const About = () => {
     console.log('Download...');
   }
 
+  const handleGoPageAbout = () => {
+
+  }
+
   return (
     <Element name="indexAbout" id="about">
       <div className="section__main  wrapper">
@@ -106,11 +111,13 @@ export const About = () => {
               Con experiencia, facilitando la creación de nuevas soluciones con el uso de distintas metodologías, marcos y herramientas.
             </p>
             <div className="box__input" ref={effectButton}>
+              {/* <Link to="/PageAbout"> */}
               <ButtonPrimary
                 title="Sobre mí"
                 styleClass="btn__primary btn__sm m-b m-b-opt"
                 eventclick={handleDownloadCV}
               />
+              {/* </Link> */}
             </div>
           </div>
 

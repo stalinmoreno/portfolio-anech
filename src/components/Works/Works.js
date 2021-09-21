@@ -1,11 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { FaAngleRight } from "react-icons/fa";
 import { Element } from 'react-scroll';
 import { gsap, Power3 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { ModalWork } from './ModalWork';
+import { useModal } from '../hooks/useModal'
+import dataWorks from '../../data/works.json';
+import reactDom from 'react-dom';
+import { WorkContext } from '../../Context/DataContext';
+import { useModalWithData } from '../hooks/useModalWithData';
 
 export const Works = () => {
 
@@ -79,6 +84,19 @@ export const Works = () => {
 
   }, []);
 
+
+  const [
+    setIsModalOpened,
+    isModalOpened,
+    data,
+    setData] = useModalWithData();
+  /* asignar context */
+  // const { setSelectedWork } = useContext(WorkContext);
+
+  // const handleSelectedWork = (id) => {
+  //   setSelectedWork(id);
+  // }
+
   return (
     <Element id="works" name="indexWorks">
       <div className="section__main wrapper">
@@ -88,78 +106,59 @@ export const Works = () => {
           <Splide
             options={splideOptions}
           >
-            <SplideSlide>
-              <div className="panel_works">
-                <div className="panel_works_item">
-                  <img alt="imagen" src="../images/work01.jpg" />
-                  <div className="panel_works_item_footer">
-                    <div className="panel_works_item_footer_title">UTEC 1</div>
-                    <div className="panel_works_item_footer_description">Trabajo desarrollado para agilizar procesos</div>
-                    <div className="panel_works_item_footer_link">
-                      <a href="#"><span>Ver más</span><FaAngleRight /></a>
+            {
+              dataWorks.Works.length > 0 ?
+                dataWorks.Works.map(work => (
+                  <SplideSlide  >
+                    <div className="panel_works">
+                      <a
+                        key={work.id}
+                        onClick={() => {
+                          setData(work);
+                          setIsModalOpened(true);
+                        }}
+                      >
+                        <div className="panel_works_item" >
+                          <img alt="imagen" src={work.image} />
+                          <div className="panel_works_item_footer">
+                            <div className="panel_works_item_footer_title">{work.title}</div>
+                            <div className="panel_works_item_footer_description">{work.description}</div>
+                            <div className="panel_works_item_footer_link">
+                              <a><span>Ver más</span><FaAngleRight /></a>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </SplideSlide>
-
-            <SplideSlide>
-              <div className="panel_works">
-                <div className="panel_works_item">
-                  <img alt="imagen" src="../images/work01.jpg" />
-                  <div className="panel_works_item_footer">
-                    <div className="panel_works_item_footer_title">UTEC 2</div>
-                    <div className="panel_works_item_footer_description">Trabajo desarrollado para agilizar procesos</div>
-                    <div className="panel_works_item_footer_link">
-                      <a href="#"><span>Ver más</span><FaAngleRight /></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SplideSlide>
-
-            <SplideSlide>
-              <div className="panel_works">
-                <div className="panel_works_item">
-                  <img alt="imagen" src="../images/work01.jpg" />
-                  <div className="panel_works_item_footer">
-                    <div className="panel_works_item_footer_title">UTEC 3</div>
-                    <div className="panel_works_item_footer_description">Trabajo desarrollado para agilizar procesos</div>
-                    <div className="panel_works_item_footer_link">
-                      <a href="#"><span>Ver más</span><FaAngleRight /></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SplideSlide>
-
-            <SplideSlide>
-              <div className="panel_works">
-                <div className="panel_works_item">
-                  <img alt="imagen" src="../images/work01.jpg" />
-                  <div className="panel_works_item_footer">
-                    <div className="panel_works_item_footer_title">UTEC 4</div>
-                    <div className="panel_works_item_footer_description">Trabajo desarrollado para agilizar procesos</div>
-                    <div className="panel_works_item_footer_link">
-                      <a href="#"><span>Ver más</span><FaAngleRight /></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SplideSlide>
+                  </SplideSlide>
+                )) : "No hay información disponible"
+            }
 
           </Splide>
         </div>
 
-
-
-
-
-
-
-
-
       </div >
+
+
+      <ModalWork
+        isActive={isModalOpened}
+        handleClose={() => setIsModalOpened(false)}
+      >
+        {data &&
+          <>
+            <h1>{data.title}</h1>
+            <p>
+              {data.description}
+            </p>
+            <ol>
+              {
+                data.tools.map(tool => <li>{tool.title}</li>)
+              }
+            </ol>
+          </>
+        }
+      </ModalWork>
+
     </Element >
   )
 }

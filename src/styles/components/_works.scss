@@ -9,24 +9,30 @@
     //width: 30rem;
     overflow: hidden;
     margin: 2rem 1rem;
-    //position: relative;
+    position: relative;
     box-shadow: 1px 2px 15px rgba(#000000, 0.1);
-    //min-height: 22rem;
+    height: 25rem;
+    cursor: pointer;
+    z-index: 1;
     img {
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
-      //height: 25rem;
+      height: 100%;
       //width: 100%;
+      object-position: center;
+      object-fit: cover;
+      transition: transform .2s;
+      
     }
     &_footer {
-      //position: absolute;
-      //bottom: 0;
+      position: absolute;
+      bottom: 0;
       background-color: #FFFFFF;
       width: 100%;
       padding: 0.8rem 1.5rem;
 
       &_title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
       }
 
@@ -37,7 +43,7 @@
         a {
           text-decoration: none;
           display: flex;
-          font-size: 1.2rem;
+          font-size: 1rem;
           align-items: center;
           //background-color: red;
           color: $body-color;
@@ -49,10 +55,13 @@
         }
       }
       &_description {
-        font-size: $normal-font-size;
+        font-size: 1rem;
         line-height: 1.5rem;
       }
     }
+    &:hover > img{
+        transform: scale(1.2);
+      }
   }
 
 }
@@ -68,9 +77,36 @@
 * SMALL
 */
 
-@media screen  and (min-width: 365px){
+@media screen  and (min-width: 360px){
 
- 
+ .panel_works{
+
+    &_item {
+      height: 30rem;
+      img {
+      
+    }
+    &_footer {
+
+
+      &_title {
+        font-size: 2rem;
+      }
+
+      &_link{
+
+        
+        a {
+        font-size: 1.2rem;
+          
+        }
+      }
+      &_description {
+        font-size: $normal-font-size;
+      }
+    }
+    }
+  }
 
 }
 

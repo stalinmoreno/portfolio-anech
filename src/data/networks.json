@@ -1,0 +1,20 @@
+{
+  "Networks": [
+    {
+      "icon": "FaLinkedinIn",
+      "src": "https://www.linkedin.com/in/astrid-escajadillo-chavez-b19535160/"
+    },
+    {
+      "icon": "FaYoutube",
+      "src": "https://www.youtube.com/channel/UCvyuR2PYB1vrcMlnzmQdB9Q"
+    },
+    {
+      "icon": "FaInstagram",
+      "src": "https://www.instagram.com/astrid.escajadillo"
+    },
+    {
+      "icon": "FaBehance",
+      "src": "https://www.behance.net/astridescajad"
+    }
+  ]
+}
