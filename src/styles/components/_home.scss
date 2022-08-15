@@ -1,5 +1,3 @@
-
-
 /*
 * MOBILE
 */
@@ -15,6 +13,7 @@
   //border: 1px solid yellow;
   min-height: 600px;
   //height: calc(100vh - 100px);
+
   position: relative;
   //border: 1px solid red;
 }
@@ -35,22 +34,22 @@
 
   grid-template-columns: repeat(1, 1fr);
   //border: 1px solid red;
-  
+
 }
 
 .home__red_social {
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   z-index: 2;
   position: relative;
-  background-color:none;
+  background-color: none;
   //top: 35%;
   //right: 0;
-  
-  .icon_red_social{
+
+  .icon_red_social {
     font-size: 1.5rem;
     padding: 0.8rem;
     margin: 5px;
@@ -72,7 +71,7 @@
       color: #ffffff;
     }
   }
-  
+
 
 }
 
@@ -80,18 +79,20 @@
   margin: 0;
   align-self: center;
   text-align: center;
+
   //max-width: 25rem;
   h1 {
     font-size: 2.8rem;
     justify-content: center;
     color: $body-color;
+
     .title_home {
 
       background: -webkit-linear-gradient(30deg, $second-color, $first-color);
       background: -moz-linear-gradient(30deg, $second-color, $first-color);
       background: -o-linear-gradient(30deg, $second-color, $first-color);
       background: linear-gradient(30deg, $second-color, $first-color);
-      color:transparent;
+      color: transparent;
       //text-transform: uppercase;
       -webkit-background-clip: text;
     }
@@ -118,7 +119,7 @@
   margin: auto;
 }
 
-.box__foto{
+.box__foto {
   //height: 50rem;
   //min-height: 50rem;
 }
@@ -131,11 +132,11 @@
 * SMALL
 */
 
-@media screen  and (min-width: 365px){
+@media screen and (min-width: 365px) {
 
-  
+
   #home__foto {
-    
+
     height: 35rem;
 
   }
@@ -145,31 +146,32 @@
 /*
 * TABLET
 */
-@media screen  and (min-width: 576px){
+@media screen and (min-width: 576px) {
 
   .sec__home {
-    
+
     h1 {
       font-size: 4rem;
     }
   }
 
-    #home__foto {
-    
+  #home__foto {
+
     height: 30rem;
 
   }
-  
+
 
 
 }
+
 /*
 * LAPTOP
 */
-@media screen  and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
   .header {
-   //background-color: red;
+    //background-color: red;
   }
 
   // .b-grid {
@@ -179,14 +181,14 @@
 
   #home {
     padding-top: 4rem;
-  }  
+  }
 
 
 
   .home__red_social {
     //flex-direction: column;
-    
-    .icon_red_social{
+
+    .icon_red_social {
       //margin: 0.5rem 0;
     }
 
@@ -197,7 +199,7 @@
     align-self: center;
   }
 
-    
+
   #home__foto {
     //max-height: 30rem;
     //max-width: 30rem;
@@ -213,17 +215,18 @@
 
 
 }
+
 /*
 * DESKTOP
 */
-@media screen  and (min-width: 900px){
+@media screen and (min-width: 900px) {
 
   #home {
     padding-top: 6rem;
-  }  
+  }
 
   .header {
-   //background-color: green;
+    //background-color: green;
   }
 
   // .sec__home {
@@ -236,8 +239,9 @@
     top: 35%;
     right: 0;
     z-index: 2;
-background-color: rgba(242,244,249,0.7);
-    .icon_red_social{
+    background-color: rgba(242, 244, 249, 0.7);
+
+    .icon_red_social {
       margin: 0.5rem 0;
     }
 
@@ -246,34 +250,36 @@ background-color: rgba(242,244,249,0.7);
 
   .sec__home {
     text-align: left;
+
     //max-width: 25rem;
     h1 {
       font-size: 4rem;
       text-align: left;
       margin-top: 0;
     }
-    ul{
+
+    ul {
       text-align: left;
     }
   }
-  
+
 
 
   #home {
-   // height: 90vh;
+    // height: 90vh;
     max-height: 1000px;
   }
 
-    
+
   .b-grid {
     grid-template-columns: 0.57fr 1fr;
     gap: 0rem;
   }
 
-  
+
   #home__foto {
     height: 35rem;
-   // max-height: 40rem;
+    // max-height: 40rem;
     //width: 40rem;
   }
 
@@ -283,22 +289,24 @@ background-color: rgba(242,244,249,0.7);
 
 }
 
-@media screen  and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   #home__foto {
     height: 43rem;
   }
+
   #home {
     //padding-top: 5rem;
-  }  
+  }
+
   #home .svg {
     //background-size: cover;
   }
 }
 
-@media screen  and (min-width: 1400px){
+@media screen and (min-width: 1400px) {
   #home {
     //padding-top: 9rem;
-  }  
+  }
 
 
 }

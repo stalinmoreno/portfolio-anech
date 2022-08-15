@@ -1,0 +1,157 @@
+.work-details-h1 {
+  margin-top: 0;
+  //font-size: 3rem;
+  font-size: 2rem;
+  color: $first-color;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.work-details-title {
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.work-details-over {
+
+
+
+  overflow-y: auto;
+  height: calc(85vh - 100px);
+  /* overflow: hidden; */
+  //background: rebeccapurple;
+  /* padding: 3rem; */
+  // max-height: 41rem;
+
+
+  //text-align: center;
+  //display: flex;
+  //align-items: ;
+  p {
+    //margin-top: 0;
+    //padding: 0 auto;
+    margin: 0;
+    //margin-left: 2rem;
+    //margin-right: 2rem;
+    //text-align: justify;
+    //max-width: 60rem;
+    font-size: 1.25rem;
+    max-width: 70rem;
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.work-details_ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  li {
+    margin: 0.5rem;
+    //display: flex;
+    //align-items: center;
+    text-align: center;
+    //justify-content: center;
+  }
+
+}
+
+.work-details_tools {
+
+  width: 50px;
+  height: 50px;
+  //border: 1px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  list-style-type: none;
+  margin-top: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(#686868, 0.1);
+
+  &_icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem;
+    color: $first-color;
+  }
+
+}
+
+.work-datails-image {
+  // width: 100%;
+  //height: 90vh;
+  // text-align: center;
+  //height: calc(100vh - 50vh);
+
+
+  width: 100%;
+  text-align: center;
+  //background: red;
+  padding: 2rem;
+  /* height: 1500px; */
+  /* overflow: auto;*/
+
+  img {
+    width: 100%;
+    height: auto;
+    //padding: 0 10px 50px 10px;
+    box-shadow: 0px 0px 40px rgba(#000000, 0.2);
+  }
+
+}
+
+/*
+.modal-svg {
+  width: 100%;
+  height: 7rem;
+  background-image: url(../../assets/image/wave02.svg);
+  background-repeat: no-repeat;
+  background-size: 250rem;
+  background-position: center bottom;
+  position: absolute;
+  bottom: 0;
+
+}*/
+
+/*
+* SMALL
+*/
+
+@media screen and (min-width: 360px) {}
+
+/*
+* TABLET
+*/
+@media screen and (min-width: 576px) {}
+
+/*
+* LAPTOP
+*/
+@media screen and (min-width: 768px) {
+
+  .work-datails-image {
+
+    img {
+      width: 80%;
+    }
+
+  }
+
+}
+
+/*
+* DESKTOP
+*/
+@media screen and (min-width: 1024px) {}

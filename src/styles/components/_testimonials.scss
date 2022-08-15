@@ -1,8 +1,8 @@
-
 #testimonials {
   background-color: $nav-color;
-  padding: 3rem 0;
+  padding: 10rem 0;
   color: $body-color;
+  //border: 1px solid green;
 
   p {
     font-size: 1.25rem;
@@ -13,24 +13,27 @@
 
 .card_testimonial {
   background-color: #ffffff;
-  border-radius: 7px;
-  border: 1px solid $first-color;
+  border-radius: 5%;
+  //border: 1px solid $first-color;
   padding: 1rem 2rem;
   //margin: 2.2rem auto;
   margin: 2rem auto;
-  max-width: 17rem;
+  max-width: 20rem;
   //max-width: 25rem;
   position: relative;
-  box-shadow: 1px 2px 15px rgba(#000000, 0.1);
+  //box-shadow: 1px 2px 15px rgba(#000000, 0.1);
+
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
   .card_comment {
 
     color: $body-color;
     margin-top: 35px;
     margin-bottom: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     height: 10.5rem;
 
-    @include ellipsis-multiline(17,1.4,6,10);
+    @include ellipsis-multiline(17, 1.4, 6, 10);
 
 
     &::before {
@@ -56,7 +59,7 @@
 
     display: flex;
     align-items: center;
-    border-top: 1px solid rgba(0,0,0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1.5rem 0 0 0;
 
     &_foto {
@@ -67,7 +70,7 @@
       //border: 1px solid rgba(0,0,0, 0.1);
       overflow: hidden;
       position: relative;
-      
+
       img {
         height: 100%;
         width: 100%;
@@ -80,15 +83,18 @@
     }
 
     &_name {
-      
+
       margin-left: 1rem;
 
       h3 {
-        color: $first-color;
+        //color: $first-color;
+        color: $body-color;
         margin: 0 0 0.2rem 0;
       }
+
       div {
         color: $body-color;
+        //color: $first-color;
       }
 
     }
@@ -105,27 +111,23 @@
 /*
 * TABLET
 */
-@media screen  and (min-width: 576px){
+@media screen and (min-width: 576px) {}
 
-
-}
 /*
 * LAPTOP
 */
-@media screen  and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
 
   .testimonial_grid {
-      grid-template-columns: 1fr;
-      gap: 0rem;
+    grid-template-columns: 1fr;
+    gap: 0rem;
   }
 
 
 }
+
 /*
 * DESKTOP
 */
-@media screen  and (min-width: 1024px){
-
-
-}
+@media screen and (min-width: 1024px) {}

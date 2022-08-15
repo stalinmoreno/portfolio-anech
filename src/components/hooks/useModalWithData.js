@@ -14,18 +14,20 @@ export const useModalWithData = (
   if (data != null) {
     alldata = detailwork.filter(e => e.idwork === data.id);
     //setData({ ...data, alldata });
+    alldata = alldata[0];
   }
-  console.log(data);
+  console.log(alldata);
   const customSetIsModalOpened = isModalOpened => {
     setIsModalOpened(isModalOpened);
     if (isModalOpened === false) {
       setData(null);
     }
-  };
+  }
+
   return [
     customSetIsModalOpened,
     isModalOpened,
-    data,
+    alldata,
     setData
   ]
 }

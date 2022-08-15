@@ -4,113 +4,18 @@
       "id": 1,
       "title": "UTEC 1",
       "description": "Innovando y agilizando procesos",
-      "tools": [
-        {
-          "id": "1",
-          "title": "figma",
-          "icon": "figma"
-        },
-        {
-          "id": "2",
-          "title": "figma",
-          "icon": "figma"
-        },
-        {
-          "id": "3",
-          "title": "figma",
-          "icon": "figma"
-        }
-      ],
       "image": "../images/work01.jpg"
     },
     {
       "id": 2,
       "title": "UTEC 2",
       "description": "Innovando y agilizando procesos",
-      "tools": [
-        {
-          "id": "1",
-          "title": "figma",
-          "icon": "figma"
-        },
-        {
-          "id": "2",
-          "title": "figma",
-          "icon": "figma"
-        }
-      ],
       "image": "../images/work01.jpg"
     },
     {
       "id": 3,
       "title": "UTEC 3",
       "description": "Innovando y agilizando procesos",
-      "tools": [
-        {
-          "id": "1",
-          "title": "figma",
-          "icon": "figma"
-        },
-        {
-          "id": "2",
-          "title": "figma",
-          "icon": "figma"
-        }
-      ],
-      "image": "../images/work01.jpg"
-    },
-    {
-      "id": 4,
-      "title": "UTEC 4",
-      "description": "Innovando y agilizando procesos",
-      "tools": [
-        {
-          "id": "1",
-          "title": "figma",
-          "icon": "figma"
-        },
-        {
-          "id": "2",
-          "title": "figma",
-          "icon": "figma"
-        }
-      ],
-      "image": "../images/work01.jpg"
-    },
-    {
-      "id": 5,
-      "title": "UTEC 5",
-      "description": "Innovando y agilizando procesos",
-      "tools": [
-        {
-          "id": "1",
-          "title": "figma",
-          "icon": "figma"
-        },
-        {
-          "id": "2",
-          "title": "figma",
-          "icon": "figma"
-        }
-      ],
-      "image": "../images/work01.jpg"
-    },
-    {
-      "id": 6,
-      "title": "UTEC 6",
-      "description": "Innovando y agilizando procesos",
-      "tools": [
-        {
-          "id": "1",
-          "title": "figma",
-          "icon": "figma"
-        },
-        {
-          "id": "2",
-          "title": "figma",
-          "icon": "figma"
-        }
-      ],
       "image": "../images/work01.jpg"
     }
   ]

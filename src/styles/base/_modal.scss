@@ -1,5 +1,5 @@
 /* Modal */
-.ReactModalPortal > div{
+.ReactModalPortal>div {
     opacity: 0;
 }
 
@@ -9,6 +9,7 @@
     justify-content: center;
     transition: opacity .2s ease-in-out;
     z-index: 999;
+    height: 100%;
 }
 
 .modalOverlay {
@@ -32,18 +33,25 @@
     background: white;
     border-radius: 5px;
     color: rgb(51, 51, 51);
-    display: inline;
-    height: 100vh;
-    width: 100%;
-    min-height: 500px;
+    //display: inline;
+    //height: 100vh;
+    //width: 100%;
+    //min-height: 500px;
     outline: none;
     padding: 2rem;
-    margin-top: 2rem;
+    margin: 2rem;
+    //max-height: 800px;
+    background-image: url(../../assets/image/wave02.svg);
+    background-repeat: no-repeat;
+    background-size: 200rem;
+    overflow: hidden;
+    top: 0;
+    position: absolute;
 }
 
 
 .ReactModal__Body--open {
-  overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 .btnCloseModal {
@@ -55,12 +63,23 @@
     cursor: pointer;
     transition: transform .2s;
 }
+
 .btnCloseModal:hover {
     background-color: $first-color;
     transform: rotate(90deg);
 }
+
 .head-close {
     width: 100%;
     display: flex;
     place-content: flex-end;
+}
+
+@media screen and (min-width: 576px) {
+    // .modal {
+    //     top: 0;
+    //     position: initial;
+    //     background-color: yellow;
+    // }
+
 }

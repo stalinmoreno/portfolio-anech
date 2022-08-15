@@ -1,7 +1,7 @@
-
 #study_experience {
   background-color: $nav-color;
   padding: 3rem 0 5rem 0;
+  //border: 1px solid red;
 }
 
 /*
@@ -12,8 +12,9 @@
   padding: 2rem 0.5rem;
   border-radius: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(100%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   gap: 1rem;
+
   .panel-card {
     background-color: #FFFFFF;
     padding: 1rem;
@@ -23,8 +24,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
     &-image {
-      
+
       div {
         width: 4rem;
         height: 4rem;
@@ -39,13 +41,15 @@
 
       }
     }
+
     &-body {
-      
+
       &-title {
         color: $body-color;
         font-weight: bold;
         font-size: 1.2rem;
       }
+
       &-description {
         margin-top: 0.7rem;
         font-size: $normal-font-size;
@@ -53,7 +57,7 @@
         color: #494E5F;
       }
     }
-  
+
   }
 }
 
@@ -61,33 +65,35 @@
 * SMALL
 */
 
-@media screen  and (min-width: 450px){
+@media screen and (min-width: 450px) {
   .title_main {
     font-size: 3rem;
   }
+
   .panel-main {
-    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 3rem;
-     .panel-card {
-               flex-direction: row;
-        align-items: left;
-        text-align: left;
 
-    &-image {
-      
-      div {
-        width: 5rem;
-        height: 5rem;
+    .panel-card {
+      flex-direction: row;
+      align-items: left;
+      text-align: left;
+
+      &-image {
+
+        div {
+          width: 5rem;
+          height: 5rem;
 
 
+        }
       }
+
     }
-
   }
-}
 
 
-  
+
 }
 
 
@@ -95,35 +101,35 @@
 /*
 * TABLET
 */
-@media screen  and (min-width: 576px){
+@media screen and (min-width: 576px) {
   .panel-main {
     padding: 4rem 2rem;
-    
-      .panel-card {
 
-      }
+    .panel-card {}
   }
 
 }
+
 /*
 * LAPTOP
 */
-@media screen  and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
 
-.study_experience_grid {
+  .study_experience_grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0rem;
-}
+  }
 
 
 }
+
 /*
 * DESKTOP
 */
-@media screen  and (min-width: 900px){
+@media screen and (min-width: 900px) {
 
-#study_experience {
-  padding-top: 5rem;
-}
+  #study_experience {
+    padding-top: 5rem;
+  }
 }

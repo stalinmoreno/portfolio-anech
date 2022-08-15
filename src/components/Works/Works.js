@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { FaAngleRight } from "react-icons/fa";
@@ -6,14 +6,14 @@ import { Element } from 'react-scroll';
 import { gsap, Power3 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ModalWork } from './ModalWork';
-import { useModal } from '../hooks/useModal'
+//import { useModal } from '../hooks/useModal'
 import dataWorks from '../../data/works.json';
-import reactDom from 'react-dom';
-import { WorkContext } from '../../Context/DataContext';
+//import reactDom from 'react-dom';
+//import { WorkContext } from '../../Context/DataContext';
 import { useModalWithData } from '../hooks/useModalWithData';
+import { FaFigma, FaYoutube, FaInstagram, FaBehance } from "react-icons/fa";
 
 export const Works = () => {
-
 
 
   //slider
@@ -59,7 +59,7 @@ export const Works = () => {
 
   useEffect(() => {
 
-    gsap.from(effectTitle.current, 0.5, {
+    gsap.from(effectTitle.current, 1, {
       scrollTrigger: {
         trigger: effectTitle.current,
         toggleActions: "play none none none",
@@ -79,7 +79,7 @@ export const Works = () => {
       autoAlpha: 0,
       opacity: 0,
       ease: Power3.easeOut,
-      delay: 0.4,
+      delay: 0.6,
     });
 
   }, []);
@@ -97,45 +97,74 @@ export const Works = () => {
   //   setSelectedWork(id);
   // }
 
+  const mostrarIconos = (_icon) => {
+    let htmlIcon
+    if (_icon == "figma") {
+      htmlIcon = <FaFigma className='work-details_tools_icon' />
+    }
+    return htmlIcon
+  }
+
   return (
     <Element id="works" name="indexWorks">
       <div className="section__main wrapper">
 
         <h1 className="title_main" ref={effectTitle}>Mis proyectos...</h1>
-        <div ref={effectSplide}>
-          <Splide
-            options={splideOptions}
-          >
-            {
-              dataWorks.Works.length > 0 ?
-                dataWorks.Works.map(work => (
-                  <SplideSlide  >
-                    <div className="panel_works">
-                      <a
-                        key={work.id}
-                        onClick={() => {
-                          setData(work);
-                          setIsModalOpened(true);
-                        }}
-                      >
-                        <div className="panel_works_item" >
-                          <img alt="imagen" src={work.image} />
-                          <div className="panel_works_item_footer">
-                            <div className="panel_works_item_footer_title">{work.title}</div>
-                            <div className="panel_works_item_footer_description">{work.description}</div>
-                            <div className="panel_works_item_footer_link">
-                              <a><span>Ver más</span><FaAngleRight /></a>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </SplideSlide>
-                )) : "No hay información disponible"
-            }
+        <div ref={effectSplide} className="work_grid">
+          {/* <Splide options={splideOptions} >  */}
+          {/* {
+            dataWorks.Works.length > 0 ?
+              dataWorks.Works.map(work => (
+                // <SplideSlide  >
+                // <div className="panel_works">
+                //   <a key={work.id} onClick={() => { setData(work); setIsModalOpened(true); }}>
 
-          </Splide>
-        </div>
+                <div div className="panel_works_item" >
+                  <img alt="imagen" src={work.image} />
+                  <div className="panel_works_item_footer">
+                    <div className="panel_works_item_footer_title">{work.title}</div>
+                    <div className="panel_works_item_footer_description">{work.description}</div>
+                    <div className="panel_works_item_footer_link">
+                      <a><span>Ver más</span><FaAngleRight /></a>
+                    </div>
+                  </div>
+                </div>
+
+                //</a>
+                //</div>
+                // </SplideSlide>
+              )) : "No hay información disponible"
+          } */}
+
+          {/* </Splide> */}
+
+
+          <div div className="panel_works_item" >
+            <img alt="imagen" src={"../images/work01.jpg"} />
+            <div className="panel_works_item_footer">
+              <div className="panel_works_item_footer_title">UTEC 1</div>
+              <div className="panel_works_item_footer_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+              <div className="panel_works_item_footer_link">
+                <a><span>Ver más</span><FaAngleRight /></a>
+              </div>
+            </div>
+          </div>
+
+          <div className="section-separate"><span></span></div>
+
+          <div div className="panel_works_item" >
+            <div className="panel_works_item_footer box-order-2">
+              <div className="panel_works_item_footer_title">UTEC 2</div>
+              <div className="panel_works_item_footer_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+              <div className="panel_works_item_footer_link">
+                <a><span>Ver más</span><FaAngleRight /></a>
+              </div>
+            </div>
+            <img alt="imagen" src={"../images/work01.jpg"} className="box-order-1" />
+          </div>
+
+
+        </div >
 
       </div >
 
@@ -146,17 +175,34 @@ export const Works = () => {
       >
         {data &&
           <>
-            <h1>{data.title}</h1>
-            <p>
-              {data.description}
-            </p>
-            <ol>
-              {
-                data.tools.map(tool => <li>{tool.title}</li>)
-              }
-            </ol>
+            {/* <div className='work-details-box'> */}
+            <h1 className='work-details-h1'>{data.title}</h1>
+            <div className='work-details-over'>
+
+              <div className='work-datails-image'>
+                <p>
+                  {data.description}
+                </p>
+
+                <div className='work-details-title'>
+                  <h3>Herramientas</h3>
+                </div>
+                <ul className='work-details_ul'>
+                  {
+                    data.tools.map(tool =>
+                      <li>
+                        {/* <div>{tool.title}</div> */}
+                        <div className='work-details_tools'>{mostrarIconos(tool.icon)}</div>
+                      </li>)
+                  }
+                </ul>
+                <img src={data.image}></img>
+              </div>
+            </div>
+            {/* </div> */}
           </>
         }
+
       </ModalWork>
 
     </Element >

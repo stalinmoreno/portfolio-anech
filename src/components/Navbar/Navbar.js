@@ -35,8 +35,11 @@ export const Navbar = () => {
     //   //   });
 
     scroller.scrollTo(name, {
+      top: 0,
       duration: 800,
       delay: 0,
+      //smooth: 'easeInOutQuart'
+      //behvior: 'smooth'
       smooth: 'easeInOutQuart'
     });
 
@@ -125,7 +128,7 @@ export const Navbar = () => {
                       smooth={true}
                       duration={500}
                       //exact="true"
-                      offset={-70}
+                      offset={-79}
                       onClick={handleNavToggleClick}
                     >Inicio</Link>
 
@@ -139,7 +142,7 @@ export const Navbar = () => {
                       spy={true}
                       smooth={true}
                       duration={500}
-                      offset={-70}
+                      offset={-79}
                       onClick={handleNavToggleClick}
                     >Sobre mí</Link>
                   </li>
@@ -152,7 +155,7 @@ export const Navbar = () => {
                       smooth={true}
                       duration={500}
                       //exact="true"
-                      offset={-100}
+                      offset={-79}
                       onClick={handleNavToggleClick}
                     >Habilidades</Link>
                   </li>
@@ -165,7 +168,7 @@ export const Navbar = () => {
                       smooth={true}
                       duration={500}
                       // exact="true"
-                      offset={-100}
+                      offset={-79}
                       onClick={handleNavToggleClick}
                     >Portafolio</Link>
                   </li>
@@ -178,7 +181,7 @@ export const Navbar = () => {
                       smooth={true}
                       duration={500}
                       // exact="true"
-                      offset={-100}
+                      offset={-79}
                       onClick={handleNavToggleClick}
                     >Testimonios</Link>
                   </li>
@@ -190,7 +193,7 @@ export const Navbar = () => {
                       smooth={true}
                       duration={500}
                       // exact="true"
-                      offset={-20}
+                      offset={-79}
                       onClick={handleNavToggleClick}
                     >Contactame</Link>
                   </li>
