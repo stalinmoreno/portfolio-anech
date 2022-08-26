@@ -67,6 +67,14 @@
   order: 2;
 }
 
+.hidenLine {
+  display: none !important;
+}
+
+.showLine {
+  display: flex;
+}
+
 // .panel_works {
 
 //   &_item {
@@ -228,9 +236,9 @@
   .panel_works_item {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding-top: 150px;
-    padding-bottom: 150px;
-
+    //padding-top: 150px;
+    //padding-bottom: 150px;
+    padding: 5rem 0;
 
     &_footer {
 
@@ -238,6 +246,18 @@
         font-size: 2.5rem;
       }
     }
+  }
+
+}
+
+@media screen and (min-width: 1445px) {
+
+  #works {
+    padding: 5rem 0;
+  }
+
+  .panel_works_item {
+    padding: 9rem 0;
   }
 
 }

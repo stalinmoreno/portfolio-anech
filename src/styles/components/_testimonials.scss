@@ -1,6 +1,6 @@
 #testimonials {
   background-color: $nav-color;
-  padding: 10rem 0;
+  padding: 4rem 0;
   color: $body-color;
   //border: 1px solid green;
 
@@ -131,3 +131,11 @@
 * DESKTOP
 */
 @media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1445px) {
+
+  #testimonials {
+    padding: 9rem 0;
+  }
+
+}

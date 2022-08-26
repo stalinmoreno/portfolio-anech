@@ -12,6 +12,9 @@ import dataWorks from '../../data/works.json';
 //import { WorkContext } from '../../Context/DataContext';
 import { useModalWithData } from '../hooks/useModalWithData';
 import { FaFigma, FaYoutube, FaInstagram, FaBehance } from "react-icons/fa";
+import { toBeEmpty } from '@testing-library/jest-dom/dist/matchers';
+import svgFigma from '../../assets/image/figma.svg';
+import svgBehance from '../../assets/image/behance.svg';
 
 export const Works = () => {
 
@@ -100,7 +103,11 @@ export const Works = () => {
   const mostrarIconos = (_icon) => {
     let htmlIcon
     if (_icon == "figma") {
-      htmlIcon = <FaFigma className='work-details_tools_icon' />
+      //htmlIcon = <FaFigma className='work-details_tools_icon' />
+      htmlIcon = <img src={svgFigma} />;
+    }
+    if (_icon == "FaBehance") {
+      htmlIcon = <img src={svgBehance} />;
     }
     return htmlIcon
   }
@@ -112,33 +119,49 @@ export const Works = () => {
         <h1 className="title_main" ref={effectTitle}>Mis proyectos...</h1>
         <div ref={effectSplide} className="work_grid">
           {/* <Splide options={splideOptions} >  */}
-          {/* {
+          {
             dataWorks.Works.length > 0 ?
               dataWorks.Works.map(work => (
                 // <SplideSlide  >
                 // <div className="panel_works">
                 //   <a key={work.id} onClick={() => { setData(work); setIsModalOpened(true); }}>
 
-                <div div className="panel_works_item" >
-                  <img alt="imagen" src={work.image} />
-                  <div className="panel_works_item_footer">
-                    <div className="panel_works_item_footer_title">{work.title}</div>
-                    <div className="panel_works_item_footer_description">{work.description}</div>
-                    <div className="panel_works_item_footer_link">
-                      <a><span>Ver más</span><FaAngleRight /></a>
-                    </div>
-                  </div>
-                </div>
-
+                // <div div className="panel_works_item" >
+                //   <img alt="imagen" src={work.image} />
+                //   <div className="panel_works_item_footer">
+                //     <div className="panel_works_item_footer_title">{work.title}</div>
+                //     <div className="panel_works_item_footer_description">{work.description}</div>
+                //     <div className="panel_works_item_footer_link">
+                //       <a><span>Ver más</span><FaAngleRight /></a>
+                //     </div>
+                //   </div>
+                // </div>
                 //</a>
                 //</div>
                 // </SplideSlide>
+
+                <>
+
+                  <div key={work.id} className={"section-separate " + (work.id === 1 ? "hidenLine " : "showLine ")}><span></span></div>
+                  <div className="panel_works_item" >
+                    <img alt="imagen" src={work.image} className={(work.id % 2 === 0 ? "box-order-2 " : "box-order-1 ")} />
+                    <div className={"panel_works_item_footer " + (work.id % 2 === 1 ? "box-order-2 " : "box-order-1 ")}>
+                      <div className="panel_works_item_footer_title">{work.title}</div>
+                      <div className="panel_works_item_footer_description">{work.description}</div>
+                      <div className="panel_works_item_footer_link">
+                        <a key={work.id} onClick={() => { setData(work); setIsModalOpened(true); }}><span>Ver más</span><FaAngleRight /></a>
+                      </div>
+                    </div>
+                  </div>
+                </>
+
               )) : "No hay información disponible"
-          } */}
+          }
 
           {/* </Splide> */}
 
 
+          {/* comentado: 17/08/2022
           <div div className="panel_works_item" >
             <img alt="imagen" src={"../images/work01.jpg"} />
             <div className="panel_works_item_footer">
@@ -161,7 +184,7 @@ export const Works = () => {
               </div>
             </div>
             <img alt="imagen" src={"../images/work01.jpg"} className="box-order-1" />
-          </div>
+          </div> */}
 
 
         </div >
@@ -191,12 +214,13 @@ export const Works = () => {
                   {
                     data.tools.map(tool =>
                       <li>
-                        {/* <div>{tool.title}</div> */}
                         <div className='work-details_tools'>{mostrarIconos(tool.icon)}</div>
                       </li>)
                   }
                 </ul>
-                <img src={data.image}></img>
+                <div className='img-work-project'>
+                  <img src={data.image}></img>
+                </div>
               </div>
             </div>
             {/* </div> */}

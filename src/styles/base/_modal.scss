@@ -39,7 +39,7 @@
     //min-height: 500px;
     outline: none;
     padding: 2rem;
-    margin: 2rem;
+    margin: 1rem;
     //max-height: 800px;
     background-image: url(../../assets/image/wave02.svg);
     background-repeat: no-repeat;
@@ -47,6 +47,7 @@
     overflow: hidden;
     top: 0;
     position: absolute;
+    max-width: 1450px;
 }
 
 

@@ -1,7 +1,8 @@
-#about{
+#about {
   padding-bottom: 3rem;
 }
-.sec__about{
+
+.sec__about {
   color: $body-color;
 }
 
@@ -12,8 +13,8 @@
   //   text-align: left;
   // }
 
-  p{
-    font-size: $normal-font-size;// 1.25rem;
+  p {
+    font-size: $normal-font-size; // 1.25rem;
     line-height: 1.5rem;
     // font-size: 1.563rem;
     // font-weight: 500;
@@ -23,7 +24,7 @@
 .box__about {
   align-self: center;
   margin: 0 auto;
-  max-width: 100%;//25rem;
+  max-width: 100%; //25rem;
   text-align: center;
 }
 
@@ -51,9 +52,9 @@
   margin-top: 6rem;
 }
 
-@media screen  and (min-width: 576px){
+@media screen and (min-width: 576px) {
 
-   .box__input {
+  .box__input {
     flex-direction: row;
     justify-content: start;
   }
@@ -62,11 +63,11 @@
     margin-right: 0.5rem;
   }
 
-  
-.sec__about {
 
-  p {
-      font-size: 1.25rem;// 1.25rem;
+  .sec__about {
+
+    p {
+      font-size: 1.25rem; // 1.25rem;
       line-height: 1.8rem;
     }
   }
@@ -79,9 +80,9 @@
 
 }
 
-@media screen  and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
-  
+
   .box__personal {
     grid-template-columns: repeat(3, 1fr);
     gap: 0rem;
@@ -89,35 +90,43 @@
 
 }
 
-@media screen  and (min-width: 900px){
+@media screen and (min-width: 900px) {
 
   #about {
     padding: 5rem 0;
-  }  
+  }
 
-.about-grid {
+  .about-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0rem;
   }
 
   .box__about {
     margin: 1.5rem;
-    order:2;
+    order: 2;
     text-align: left;
   }
+
   .box__foto_about {
     order: 1;
   }
+
   .box__about {
     .title_main {
-    text-align: left;
+      text-align: left;
     }
   }
-  
+
   // .wrapper {
   //   max-width: 1400px;
   //   margin: auto;
   // }
 
 
+}
+
+@media screen and (min-width: 1445px) {
+  #about {
+    padding: 10rem 0;
+  }
 }

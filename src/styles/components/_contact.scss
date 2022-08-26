@@ -1,17 +1,16 @@
-
 #contact {
- padding: 3rem 0 0 0;
- //color: rgba($body-color, 0.6);
+  padding: 5rem 0 0 0;
+  //color: rgba($body-color, 0.6);
   color: $body-color;
 
 }
 
 .contact-grid {
   text-align: center;
-  
+
 }
 
-.section-hey{
+.section-hey {
   margin: 3rem auto;
   max-width: 100%;
   font-size: $normal-font-size;
@@ -30,11 +29,11 @@
 //   .col-12 {
 
 //     width: 100%;
-    
+
 //     div {
 //       margin-bottom: 0.5rem;
 //     }
-  
+
 //   }
 
 //   .form-control {
@@ -67,6 +66,7 @@
   //flex-direction: column;
   justify-content: center;
   margin-top: 5rem;
+
   a {
     border: none;
     padding: 1.5rem;
@@ -80,6 +80,7 @@
     cursor: pointer;
     justify-content: center;
     transition: .2s;
+
     &:hover {
       background-color: rgba($first-color, 0.8);
       color: #ffffff;
@@ -90,7 +91,7 @@
 /*footer*/
 
 .footer-back {
-  width: 100%; 
+  width: 100%;
   height: 100px;
   zoom: 3;
   background: url(../../assets/image/wave_footer.svg);
@@ -98,24 +99,25 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-clip: content-box;
-    // display: flex;
-    // align-items: flex-end;
-    // justify-content: center;
+  // display: flex;
+  // align-items: flex-end;
+  // justify-content: center;
 }
+
 .footer {
-   // width: 100%;
-    //text-align: center;
-    background-color: $first-color;
-    font-size: 1rem;
-    padding: 0.5rem;
-    color: #FFFFFF;
-    text-align: center;
-  }
+  // width: 100%;
+  //text-align: center;
+  background-color: $first-color;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: #FFFFFF;
+  text-align: center;
+}
 
-  
-@media screen  and (min-width: 365px){
 
-  
+@media screen and (min-width: 365px) {
+
+
   .red-social {
 
     button {
@@ -124,7 +126,7 @@
 
   }
 
-  .section-hey{
+  .section-hey {
     font-size: 1.25rem;
     line-height: 1.8rem;
   }
@@ -137,29 +139,34 @@
 /*
 * TABLET
 */
-@media screen  and (min-width: 576px){
-  .section-hey{
-max-width: 80%;
+@media screen and (min-width: 576px) {
+  .section-hey {
+    max-width: 80%;
   }
 
 }
+
 /*
 * LAPTOP
 */
-@media screen  and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
 
   .contact-grid {
-     // grid-template-columns: 1fr 80px 1fr;
-      //gap: 0rem;
+    // grid-template-columns: 1fr 80px 1fr;
+    //gap: 0rem;
   }
 
 
 }
+
 /*
 * DESKTOP
 */
-@media screen  and (min-width: 1024px){
+@media screen and (min-width: 1024px) {}
 
-
+@media screen and (min-width: 1024px) {
+  #contact {
+    padding: 7rem 0 0 0;
+  }
 }

@@ -3,6 +3,7 @@
     "iddetail": 1,
     "idwork": 1,
     "description": "parrafo 1",
+    "title": "UTEC 1",
     "tools": [
       {
         "id": "1",
@@ -21,6 +22,7 @@
     "iddetail": 2,
     "idwork": 2,
     "description": "parrafo 2",
+    "title": "UTEC 2",
     "tools": [
       {
         "id": "1",
@@ -53,59 +55,5 @@
       }
     ],
     "image": "https://res.cloudinary.com/dklo8xmbv/image/upload/v1648786749/cbtfilysvftsbkqaickt.jpg"
-  },
-  {
-    "iddetail": 4,
-    "idwork": 4,
-    "description": "parrafo 4",
-    "tools": [
-      {
-        "id": "1",
-        "title": "figma",
-        "icon": "figma"
-      },
-      {
-        "id": "2",
-        "title": "figma",
-        "icon": "FaBehance"
-      }
-    ],
-    "image": "../images/work01.jpg"
-  },
-  {
-    "iddetail": 5,
-    "idwork": 5,
-    "description": "parrafo 5",
-    "tools": [
-      {
-        "id": "1",
-        "title": "figma",
-        "icon": "figma"
-      },
-      {
-        "id": "2",
-        "title": "figma",
-        "icon": "FaBehance"
-      }
-    ],
-    "image": "../images/work01.jpg"
-  },
-  {
-    "iddetail": 6,
-    "idwork": 6,
-    "description": "parrafo 6",
-    "tools": [
-      {
-        "id": "1",
-        "title": "figma",
-        "icon": "figma"
-      },
-      {
-        "id": "2",
-        "title": "figma",
-        "icon": "FaBehance"
-      }
-    ],
-    "image": "../images/work01.jpg"
   }
 ]

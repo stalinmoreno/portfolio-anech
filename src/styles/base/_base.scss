@@ -1,7 +1,11 @@
+.App {
+  overflow-x: hidden;
+}
 
-.App { overflow-x: hidden;}
 //***** Base ******
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -29,6 +33,7 @@ body {
   color: $body-color;
   text-align: center;
   //margin: 3rem 0;
+  margin-top: 0;
 }
 
 .title_center {
@@ -42,13 +47,13 @@ body {
 
 
 /* ELLIPSIS MULTILINEA */
-@mixin ellipsis-multiline($font-size, $line-height, $lines-to-show, $margin:"0") {
+@mixin ellipsis-multiline($font-size, $line-height, $lines-to-show, $margin: "0") {
   $height-calc: $font-size*$line-height*$lines-to-show;
   display: block;
   display: -webkit-box;
   font-size: $font-size*1px;
   line-height: $line-height;
-  max-height: 196.8px;// ($height-calc + $margin)*1px;
+  max-height: 196.8px; // ($height-calc + $margin)*1px;
   overflow: hidden;
   //position: relative;
   text-overflow: ellipsis;
@@ -62,10 +67,10 @@ body {
 
 
 
-.b-grid, 
-.about-grid, 
-.box__personal, 
-.study_experience_grid, 
+.b-grid,
+.about-grid,
+.box__personal,
+.study_experience_grid,
 .work_grid,
 .testimonial_grid {
   display: grid;
@@ -75,7 +80,7 @@ body {
   height: 100%;
   //align-items: center;
   gap: 0rem;
-  
+
 }
 
 //Scrollbar
@@ -83,11 +88,11 @@ body {
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
- 
+
 body::-webkit-scrollbar-track {
-  background:  rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: rgba($first-color, 0.4);
   border-radius: 1rem;
